@@ -31,7 +31,7 @@ node ser.js
 > 舊用戶     |  帳號：BEEP_old<br>密碼 ：BEEP_old
 > * 登入流程
 > 
-> 網址：http://luffy.ee.ncku.edu.tw:9999/home.html
+> 網址：http://luffy.ee.ncku.edu.tw:9998/home.html
 > 
 <table border="1">
 　<tr>
