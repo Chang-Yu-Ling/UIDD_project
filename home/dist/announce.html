@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>http & ajax exercise</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <meta charset="utf-8">
+  </head>
+
+  <body>
+
+<form id="ajax-form_announce" ><!--style="display: none;">    -->                    <!-- 取text -->                                             <!--id="ajax-form",type="submit"// field name[html的]-->   
+< =========== 發文 ======================== > <br>
+ talk icon(發文類別): <input id="announce_i" type="text" name="AICON" ><br><!--style="display:none;"><br>    -->  
+  talk topic: <input id="announce_top" type="text" name="ATOPIC" ><br><!--style="display:none;"><br>    -->  
+  talk text: <input id="announce_text" type="text" name="ATEXT" ><br><!--style="display:none;"><br>    -->
+ 
+  talk sub_user: <input id="announce_text" type="text" name="ASUB" ><br><!--style="display:none;"><br>    -->
+
+  <button type="submit" id="announce_b_text" style="display:block;">submit via ajax</button> <!--style="display:none;">submit via ajax</button>-->                                    <!--id="ajax-form",type="submit"// field name[html的]-->   
+</form>
+
+<div id="ajax-output_total"></div>
+</form>
+<form id="ajax-form_text" ><!--style="display: none;">    -->                        <!-- 取text -->       
+<br><br>< =========== 留言 ======================== ><br>                                      <!--id="ajax-form",type="submit"// field name[html的]-->   
+  talk topic: <input id="view_t" type="text" name="TOPIC" ><br><!--style="display:none;"><br>    -->  
+talk hot: <input id="view_h" type="text" name="COM_H" ><br><!--style="display:none;"><br>    -->  
+talk comment: <input id="view_c" type="text" name="COM_T" ><br><!--style="display:none;"><br>    -->  
+talk user: <input id="view_u" type="text" name="COM_U" ><br><!--style="display:none;"><br>    -->   
+talk userpic: <input id="view_up" type="text" name="COM_UP" ><br><!--style="display:none;"><br>    -->  
+
+
+
+  <button type="submit" id="view_b_text" style="display:block;">submit via ajax</button> <!--style="display:none;">submit via ajax</button>-->                                     <!--id="ajax-form",type="submit"// field name[html的]-->   
+</form>
+
+
+</form>
+<form id="ajax-form_talklike" ><!--style="display: none;">    -->                        <!-- 取text -->       
+<br><br>< =========== like ======================== ><br>                                      <!--id="ajax-form",type="submit"// field name[html的]-->   
+  talk topic: <input id="talklike_t" type="text" name="TLTOPIC" ><br><!--style="display:none;"><br>    -->  
+talk user: <input id="talklike_u" type="text" name="TLUSER" ><br><!--style="display:none;"><br>    -->   
+
+  <button type="submit" id="view_b_talklike" style="display:block;">submit via ajax</button> <!--style="display:none;">submit via ajax</button>-->                                     <!--id="ajax-form",type="submit"// field name[html的]-->   
+</form>
+
+<form id="ajax-form_notice" ><!--style="display: none;">    -->                        <!-- 取text -->       
+<br><br>< =========== 通知 ======================== ><br>                                      <!--id="ajax-form",type="submit"// field name[html的]-->   
+  talk user: <input id="notice_u" type="text" name="NOTEUSER" ><br><!--style="display:none;"><br>    -->  
+
+  <button type="submit" id="view_b_notice" style="display:block;">submit via ajax</button> <!--style="display:none;">submit via ajax</button>-->                                     <!--id="ajax-form",type="submit"// field name[html的]-->   
+</form>
+<br><br>< =========== 通知out ======================== ><br>  
+<div id="ajax-output_notice" ></div>
+<br><br>< @@@@@@@@@@@@@@@@@ end @@@@@@@@@@@@@@@@@@@@@@ ><br>  
+
+
+
+
+<form id="ajax-form_cardnote" ><!--style="display: none;">    -->                        <!-- 取text -->       
+<br><br>< =========== 通知card ======================== ><br>                                      <!--id="ajax-form",type="submit"// field name[html的]-->   
+  <!--talk user: <input id="cardnote_u" type="text" name="CNOTEUSER" ><br><!--style="display:none;"><br>    -->  
+
+  <button type="submit" id="view_b_cardnote" style="display:block;" onclick="alert('123');">cardnote</button>  
+</form>
+<br><br>< =========== 通知cardout ======================== ><br>  
+<div id="ajax-output_cardnote" ></div>
+<br><br>< @@@@@@@@@@@@@@@@@ endcard @@@@@@@@@@@@@@@@@@@@@@ ><br>  
+
+
+<form id="ajax-form_totalmytalk" ><!--style="display: none;">    -->                        <!-- 取text -->       
+<br><br>< =========== load_mytalk ======================== ><br>                                      <!--id="ajax-form",type="submit"// field name[html的]-->   
+  talk user: <input id="totalmytalk_u" type="text" name="TMYTUSER" ><br><!--style="display:none;"><br>    -->  
+
+  <button type="submit" id="view_b_totalmytalk" style="display:block;">submit via ajax</button> <!--style="display:none;">submit via ajax</button>-->                                     <!--id="ajax-form",type="submit"// field name[html的]-->   
+</form>
+<br><br>< =========== load_mytalk ======================== ><br>  
+<div id="ajax-output_totalmytalk" ></div>
+<br><br>< @@@@@@@@@@@@@@@@@ end @@@@@@@@@@@@@@@@@@@@@@ ><br> 
+
+
+<form id="ajax-form_totalmytalk_annmy" ><!--style="display: none;">    -->                        <!-- 取text -->       
+<br><br>< =========== load_mytalk_annmy@@@@@@@@@@@@ ======================== ><br>                                      <!--id="ajax-form",type="submit"// field name[html的]-->   
+  talk user: <input id="totalmytalk_u_annmy" type="text" name="TMYTUSER_annmy" ><br><!--style="display:none;"><br>    -->  
+
+  <button type="submit" id="view_b_totalmytalk_annmy" style="display:block;">submit via ajax</button> <!--style="display:none;">submit via ajax</button>-->                                     <!--id="ajax-form",type="submit"// field name[html的]-->   
+</form>
+<br><br>< =========== load_mytalk ======================== ><br>  
+<div id="ajax-output_totalmytalk_annmy" ></div>
+<br><br>< @@@@@@@@@@@@@@@@@ end @@@@@@@@@@@@@@@@@@@@@@ ><br> 
+
+
+
+
+<form id="ajax-form_totalhottalk" ><!--style="display: none;">    -->                        <!-- 取text -->       
+<br><br>< =========== load_hottalk ======================== ><br>                                      <!--id="ajax-form",type="submit"// field name[html的]-->   
+  
+  <button type="submit" id="view_b_totalhottalk" style="display:block;">submit via ajax</button> <!--style="display:none;">submit via ajax</button>-->                                     <!--id="ajax-form",type="submit"// field name[html的]-->   
+</form>
+<br><br>< =========== load_hottalk ======================== ><br>  
+<div id="ajax-output_totalhottalk" ></div>
+<br><br>< @@@@@@@@@@@@@@@@@ end @@@@@@@@@@@@@@@@@@@@@@ ><br> 
+
+
+
+<form id="ajax-form_load_count" ><!--style="display: none;">    -->                        <!-- 取text -->       
+<br><br>< =========== 計數 ======================== ><br>                                      <!--id="ajax-form",type="submit"// field name[html的]-->   
+  talk user: <input id="load_count_u" type="text" name="NOTEUSER_load_count" ><br><!--style="display:none;"><br>    -->  
+
+  <button type="submit" id="view_b_load_count" style="display:block;">submit via ajax</button> <!--style="display:none;">submit via ajax</button>-->                                     <!--id="ajax-form",type="submit"// field name[html的]-->   
+</form>
+<br><br>< =========== 計數out ======================== ><br>  
+<div id="p_header_span_number2" ></div>
+<div id="p_header_span_number" ></div>
+
+<br><br>< @@@@@@@@@@@@@@@@@ end @@@@@@@@@@@@@@@@@@@@@@ ><br>  
+
+
+
+
+
+<script src="talk.js"></script>
+    <script src="./exercise.js"></script>
+    <script src="main.js"></script>
+
+  </body>
+</html>

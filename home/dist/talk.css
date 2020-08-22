@@ -1,0 +1,622 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    }
+body {
+    background-color: rgb(73, 250, 191);
+
+width:100%;
+height:100%;
+overflow-x:hidden;
+overflow-y:hidden;
+margin:0%;
+
+}
+[class*="ng_Page"]{
+
+    height:100vh;
+    width:100vw;
+    position: absolute;
+    color:white;
+}
+[class*="ng_MainInterface"]{
+overflow: hidden;
+}
+.ng_Page_1{
+    display:block;
+    background-image: url(./pic/loginBack.svg);
+background-size:cover;
+
+  }
+.ng_Page_2{
+    display:none;
+    background-image: url(./pic/loginBack.svg);
+background-size:cover;
+
+}
+.ng_Page_3{
+    display:none;
+    background-image: url(./pic/loginBack.svg);
+background-size:cover;
+
+} 
+.ng_Page_1-3{
+    display:none;
+    background-image: url(./pic/loginBack.svg);
+background-size:cover;
+
+}   
+.ng_Page_2-3{
+    display:none;
+    background-image: url(./pic/loginBack.svg);
+background-size:cover;
+
+}
+.ng_Page_4to8{
+height:87%;
+}
+#ng_Page_4to8{
+  display: none;
+}
+.ng_Login_Square{
+    margin:19vh 15% 8vh 15%;
+    height:28%;
+    width:70%;
+    font-size: 1.4em;
+    padding-top: 30%;
+text-align: center;
+}
+
+.ng_Column1{
+
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2em;
+  margin: 5px 20%;
+  padding: 3.2px 10px;
+  background-image: url(./pic/Group45.svg);
+  background-size: cover;
+  }
+  .ng_Column2{
+      float:left;
+      padding: 2px 10px;
+      border-radius: 20px;
+      text-align: center;
+      font-size: 1.2em;
+      background-image: url(./pic/Group48.svg);
+      background-size: cover;
+  }
+  
+
+.ng_Welcome{
+    text-align: center;
+    margin: 30vh 0 10vh 0 ;
+    font-size: 2.2vmin/1;
+}
+
+.ng_Login_googlebox{
+margin:25vh 15vw 0 15vw;
+width:70vw;
+height:45%;
+border-radius: 10px;
+background-color: black;
+}
+
+header {
+    position: relative;
+    background-color: #101010;
+    margin: 0 auto;
+    width: 100%;
+    height: 6.5%;
+    background-size: cover;
+    z-index: 1;
+  }
+  
+  #ham {
+    margin-left: 4%;
+    width: 7%;
+  }
+
+  .ng_MainInterface_4to8{
+height:100%;
+width: 100%;
+  }
+
+  .ng_Bottom2{
+height: 9%;
+width: 100%;
+background-color: black;
+
+  }
+
+  .ng_Bottom2_block{
+width:33.33%;
+float: left;
+height: 100%;
+text-align: center;
+border-bottom: snow ;
+  }
+
+  .ng_Bottom1{
+height:6.6%;
+width:100%;
+background-color: #101010;
+  }
+
+  .ng_MainInterface_4to8_4{
+height: 100%;
+width:100%;
+display:none;
+  }
+
+.ng_MainInterface_4to8_6,#ng_text,#ng_announce{
+    height: 100%;
+    width:100%;
+    display:block;
+    padding:0 4% 0 4%;
+overflow:hidden;
+}
+
+.ng_MainInterface_4to8_7{
+    height: 100%;
+    width:100%;
+    display:none;
+}
+
+
+[class*="ng_PostColumn"]{}
+
+
+.ng_PostColumn{
+    height:13%;
+    width:100%;
+    border-radius: 14px;
+    box-sizing: border-box;
+    padding: 2.2% 4%;
+    margin-bottom: 2%;
+    background-image: url(./pic/Rectangle97.svg);
+    background-size: cover;
+text-align:left;
+  }
+
+.ng_PostColumn_Img{
+float: left;
+width: 13%;
+height: 100%;
+box-sizing: border-box;
+margin-right: 5%;
+overflow: visible;
+padding-top:3%;
+}
+
+.ng_PostColumn_PostType{
+    float: none;
+height:66.66%;
+box-sizing: border-box;
+width:100%;
+padding-top:5px;
+}
+
+.ng_PostColumn_Name{
+    float: none;
+height:33.33%;
+width:500%;
+padding-bottom: 60%;
+box-sizing: border-box;
+overflow:hidden;
+text-overflow: ellipsis; 
+white-space: nowrap; 
+font-size: 1vmin/1;
+}
+
+.ng_PostColumn_Title{
+height:60%;
+width: 100%;
+overflow: hidden;
+text-overflow: ellipsis; 
+white-space: nowrap; 
+font-size: 1.3vmin/1;
+font-weight: bolder;
+}
+
+.ng_PostColumn_Date{
+height: 40%;
+width:40%;
+padding-top: 1%;
+float:right;
+text-align: right;
+font-size: 1.2vmin/1;
+font-weight:600;
+}
+
+#ng_ProfilePic{
+display: none;
+border-radius: 50%;
+width: 12vw;
+height: 12vw; 
+border: 1px solid grey;
+position: absolute;
+left:44vw;
+top:1.5vh;
+background-image: none;
+z-index:2;
+}
+
+/**/
+.ng_input1{
+height:4vh;
+width: 90%;
+background-image: url("./pic/Group45.svg");
+background-size: cover;
+margin:5% auto 5% auto;
+-moz-appearance: textfield-multiline;
+-webkit-appearance: textarea;
+overflow: hidden;
+white-space: nowrap;
+}
+
+.ng_button1{
+  width:18%;
+  color: black;
+background-image: url(./pic/Rectangle243.svg);
+background-size: cover;
+}
+
+[contentEditable=true]:empty:not(:focus):before{
+  content:attr(data-text);
+  -webkit-text-security:none;
+  opacity: 0.5;
+}
+
+.ng_password{
+  -webkit-text-security: disc;
+}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+
+.ng_commentTop{
+height: 16px;
+margin: 3px 0 5px 0;
+}
+
+.ng_commentTop_intend{
+float: left;
+color: black;
+font-size: 0.9em;
+width: 50%;
+}
+
+.ng_Comment{
+height: 87%;
+width: 100%;
+display: none;
+color: white;
+position: relative;
+z-index: 5;
+}
+
+.ng_Comment_block{
+  width:92%;
+  height:97.5%;
+  margin:2% 4%;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: #2B2D34;
+  overflow: hidden;
+  text-align: left;
+}
+
+.ng_Comment_write{
+height:41.2%;width:92%;
+border-radius: 25px;
+background-color: #2B2D34;
+border-radius: 15px;
+text-align: left;
+padding:2.9% 2.9% 0 2.9%;
+border: 1px solid blue;
+box-sizing: border-box;
+position: absolute;
+top:30%;
+left:4%;
+}
+.ng_Comment_write_main{
+  height:68%;
+  width:100%;
+  margin-top: 2%;
+  background-color: #FFFFFFB3;
+  border-radius: 15px;
+  padding:4% 3% 3% 3%;
+  overflow: auto;
+  overflow-wrap: break-word;
+  color: black;
+}
+.ng_Comment_block_top{
+height:45px;
+border-bottom: 1px solid grey;
+padding: 17px 5% 5px 13%;
+}
+.ng_Comment_rating{
+height:100%;
+width:4.76%;
+float: left;
+margin-right: 1%;
+}
+.ng_Comment_block_top_img{
+  height: 100%;width: 7.5%;
+  margin-top: 2px;
+  float: left;
+}
+.ng_Comment_block_top_name{
+  float: left;
+  width: 60%;
+  margin: 3px ;
+  overflow-x:scroll;
+}
+.ng_Comment_block_top_date{
+  float: left;
+  width:30% ;
+  margin: 3px 0 3px 0;
+}
+.ng_Comment_block_middle{
+width: 100%;
+height: 92%;
+padding-top: 20px;
+overflow-y: scroll;
+}
+.ng_Comment_block_main{
+  width: 94%;
+  margin:0 3% 20px 3%;
+  opacity:80%;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+.ng_Comment_block_comment{
+  width:88%;
+  height: auto;
+  margin: 0 6% 20px 6%;
+}
+
+.ng_Comment_block_comment_container{
+height: 35px;
+width: 100%;
+padding:2px;
+}
+
+.ng_Comment_block_comment_container_rate{
+height: 95%;
+width: 10%;
+float: left;
+}
+
+.ng_Comment_block_comment_container_pic{
+float: left;
+height: 95%;
+width: 10%;
+margin:0 1.5%;
+}
+
+.ng_Comment_block_comment_container_name{
+float: left;
+width: 77%;
+height: 100%;
+padding-top: 5px;
+box-sizing: border-box;
+overflow: hidden;
+text-overflow: ellipsis; 
+opacity:80%;
+}
+
+.ng_Comment_block_comment_main{
+  opacity:80%;
+  overflow: hidden;
+  overflow-wrap: break-word;
+
+}
+
+.ng_Post_frame{
+  height: 95.8%;
+  width: 100%;
+  overflow: scroll;
+  
+}
+
+#ng_Post_frame2{
+  display:none;
+}
+
+.ng_extraButton{
+position: absolute;
+height: 45px;
+width:45px;
+top:87%;
+right: 4%;
+border-radius: 50%;
+border: 1px solid white;
+background-color: black;
+background-size: cover;
+}
+
+.ng_writePostBlock{
+z-index: 5;
+width: 92%;
+height: 98%;
+background-color: #2B2D34;
+margin:1.5% 4% 1.5% 4%;
+border-radius: 10px;
+padding:1% 2.464%;
+font-size: 0.9em;
+text-align: left;
+display: none;
+}
+
+.ng_writePostBlock_top{
+height: 8%;
+padding-top:3%;
+
+}
+
+.ng_writePostBlock_top_class{
+float: left;
+height:70%;
+width:16.16%;
+margin-left: 3%;
+background-color:#2B2D34;
+border-radius: 35px;
+text-align: center;
+
+}
+
+#ng_writePostBlock_title{
+margin-top: 1.5%;
+font-size: 1.2em;
+width: 100%;
+height:6.4%;
+background-color: black;
+border-radius: 10px;
+padding-top: 3%;
+overflow: auto;
+overflow-wrap: normal;
+}
+
+#ng_writePostBlock_main{
+  margin-top: 1.5%;
+width: 100%;
+height:69.6%;
+font-size: 1.1em;
+padding:8px;
+background-color: black;
+border-radius: 10px;
+overflow: scroll;
+overflow-wrap: break-word;
+
+}
+
+.ng_notification{
+height: 87%;
+width:100%;
+padding:4% 4% 0 4%;
+box-sizing: border-box;
+display: none;
+overflow-y:scroll;
+}
+
+
+.ng_notification_block{
+  height:13%;
+  width:100%;
+  border-radius: 14px;
+  box-sizing: border-box;
+  padding: 3.5% 4%;
+  margin-bottom: 2%;
+  background-color: #2B2D34;
+
+
+}
+
+.ng_notification_block_img{
+float: left;
+width: 14%;
+height: 100%;
+padding-top: 2.5%;
+box-sizing: border-box;
+margin-right: 5%;
+
+overflow: visible;
+
+}
+
+[class*="ng_notification_block_content"]{
+
+}
+
+.ng_notification_block_content{
+float: left;
+width:81%;
+height: 100%;
+text-align: left;
+}
+
+.ng_notification_block_content_topic{
+height:55%;
+margin-bottom: 1.3%;
+color: white;
+font-size: 1.1em;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}
+
+.ng_notification_block_content_detail{
+height:40%;
+color: white;
+font-size: 0.9em;
+opacity: 0.6;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.ng_signuptocontinue{
+height: 40%;
+width:72.5%;
+border:1.5px solid black;
+border-radius: 15px;
+margin: 50% 13.7% 29% 13.7%;
+padding:10% 4% 4% 4%;
+background-color: #F3F3F3;
+}
+
+.ng_Column3{
+  height:20%;
+  width:100%;
+  padding-top: 4%;
+  font-size: 1.1em ;
+  background-image: url(./pic/Group296.svg);
+background-size: cover;
+margin-bottom: 2%;
+}
+
+.ng_collection{
+height:87%;
+color: white;
+padding:0 4% 0 4%;
+overflow: hidden;
+background-color: #F3F3F3;
+width: 100%;
+display: none;
+}
+#ng_Post_frame3{
+  display: block;
+}
+#ajax-output_totalmytalk{
+  display: none;
+}
+
+.ng_mypost{
+
+  height:87%;
+  color: white;
+  padding:7% 4% 0 4%;
+  overflow-y: scroll;
+  background-color: #F3F3F3;
+  width: 100%;
+  display: none;
+  
+}
+
+/* 我打在這裡 */
+#ni_add{
+  margin: 33vh 19.5vw 0 auto;
+  border: 0.8vw solid #2B2D34;
+  color:#2B2D34;
+  background-color: #F3F3F3;
+  border-radius: 2.5vw;
+  width: 61.3333%;
+  height: 21.5892%;
+  text-align: center;
+}
+
+#ni_wrapper{
+  padding: 4vh 0 0 0;
+}

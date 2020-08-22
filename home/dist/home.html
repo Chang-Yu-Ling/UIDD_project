@@ -1,0 +1,1973 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- =============================凱揚=============================================== -->
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link href="talk.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+  <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+  <meta name="google-signin-client_id"
+    content="828867681601-tp3jh5erkfcjitjjudcenau8hd13eak1.apps.googleusercontent.com">
+
+
+
+  <!-- =============================智平=============================================== -->
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <link rel="stylesheet" href="main.css">
+  <title>Document</title>
+
+  <!-- =============================鈺鈴=============================================== -->
+  <title>http & ajax exercise</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <meta charset="utf-8">
+  <title>exercise.html</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+  <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <link href="exercise.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<!-- CSS -->
+<style type="text/css">
+</style>
+
+<body>
+  <!-- onload="$('#b_load').get(0).click();"-->
+  <!--========= 漢堡 ================================================================================-->
+  <!-- Javascript -->
+  <script src="id.js"></script>
+  <script>
+    function statusChangeCallback(response) {
+      if (response.status === 'connected') {
+        // Logged into your app and Facebook.
+        testAPI()
+      } else if (response.status === 'not_authorized') {
+        // The person is logged into Facebook, but not your app.
+        document.getElementById('status').innerHTML = 'Please log into this app.'
+      } else {
+        // The person is not logged into Facebook, so we're not sure if
+        // they are logged into this app or not.
+        document.getElementById('status').innerHTML = 'Please log into Facebook.'
+      }
+    }
+
+    function checkLoginState() {
+      FB.getLoginStatus(function (response) {
+        statusChangeCallback(response)
+      })
+    }
+
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: myAppId,
+        cookie: true, // enable cookies to allow the server to access
+        // the session
+        version: 'v3.3', // use graph api version 3.3
+        xfbml: true, // parse social plugins on this page
+      })
+
+    }
+
+    // Load the SDK asynchronously
+    ;
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0]
+      if (d.getElementById(id)) return
+      js = d.createElement(s)
+      js.id = id
+      js.src = '//connect.facebook.net/en_US/sdk.js'
+      fjs.parentNode.insertBefore(js, fjs)
+    }(document, 'script', 'facebook-jssdk'))
+
+    function testAPI() {
+      console.log('TESTAPI:')
+      console.log(response.email)
+      FB.api('/me', function (response) {
+        //save user data( username, email)
+
+
+
+      })
+    }
+  </script>
+
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <form id="ajax-form_totalmytalk_annmy" style="display:none;">
+    <!--style="display: none;">    -->
+    <!-- 取text -->
+    <br><br>
+    <===========load_mytalk_annmy@@@@@@@@@@@@========================><br>
+      <!--id="ajax-form",type="submit"// field name[html的]-->
+      talk user: <input id="totalmytalk_u_annmy" type="text" name="TMYTUSER_annmy"><br>
+      <!--style="display:none;"><br>    -->
+
+      <button type="submit" id="view_b_totalmytalk_annmy" style="display:block;">submit via ajax</button>
+      <!--style="display:none;">submit via ajax</button>-->
+      <!--id="ajax-form",type="submit"// field name[html的]-->
+  </form>
+
+
+  <form id="ajax-form_announce" style="display: none;">
+    <!--style="display: none;">    -->
+    <!-- 取text -->
+    <!--id="ajax-form",type="submit"// field name[html的]-->
+    <===========發文========================> <br>
+      talk icon(發文類別): <input id="announce_i" type="text" name="AICON"><br>
+      <!--style="display:none;"><br>    -->
+      talk topic: <input id="announce_top" type="text" name="ATOPIC"><br>
+      <!--style="display:none;"><br>    -->
+      talk text: <input id="announce_text" type="text" name="ATEXT"><br>
+      <!--style="display:none;"><br>    -->
+
+      talk sub_user: <input id="announce_text" type="text" name="ASUB"><br>
+      <!--style="display:none;"><br>    -->
+
+      <button type="submit" id="announce_b_text" style="display:block;">submit via ajax</button>
+      <!--style="display:none;">submit via ajax</button>-->
+      <!--id="ajax-form",type="submit"// field name[html的]-->
+  </form>
+
+  <form id="ajax-form_text" style="display: none;">
+    <!--style="display: none;">    -->
+    <!-- 取text -->
+    <br><br>
+    <===========留言========================><br>
+      <!--id="ajax-form",type="submit"// field name[html的]-->
+      talk topic: <input id="view_t" type="text" name="TOPIC"><br>
+      <!--style="display:none;"><br>    -->
+      talk hot: <input id="view_h" type="text" name="COM_H"><br>
+      <!--style="display:none;"><br>    -->
+      talk comment: <input id="view_c" type="text" name="COM_T"><br>
+      <!--style="display:none;"><br>    -->
+      talk user: <input id="view_u" type="text" name="COM_U"><br>
+      <!--style="display:none;"><br>    -->
+      talk userpic: <input id="view_up" type="text" name="COM_UP"><br>
+      <!--style="display:none;"><br>    -->
+
+
+
+      <button type="submit" id="view_b_text" style="display:block;">submit via ajax</button>
+      <!--style="display:none;">submit via ajax</button>-->
+      <!--id="ajax-form",type="submit"// field name[html的]-->
+  </form>
+  <form id="ajax-form_talklike" style="display: none;">
+    <!--style="display: none;">    -->
+    <!-- 取text -->
+    <br><br>
+    <===========like========================><br>
+      <!--id="ajax-form",type="submit"// field name[html的]-->
+      talk topic: <input id="talklike_t" type="text" name="TLTOPIC"><br>
+      <!--style="display:none;"><br>    -->
+      talk user: <input id="talklike_u" type="text" name="TLUSER"><br>
+      <!--style="display:none;"><br>    -->
+
+      <button type="submit" id="view_b_talklike" style="display:block;">submit via ajax</button>
+      <!--style="display:none;">submit via ajax</button>-->
+      <!--id="ajax-form",type="submit"// field name[html的]-->
+  </form>
+  <form id="ajax-form_notice" style="display: none;">
+    <!--style="display: none;">    -->
+    <!-- 取text -->
+    <!--id="ajax-form",type="submit"// field name[html的]-->
+    talk user: <input id="notice_u" type="text" name="NOTEUSER"><br>
+    <!--style="display:none;"><br>    -->
+
+    <button type="submit" id="view_b_notice" style="display:block;">submit via ajax</button>
+    <!--style="display:none;">submit via ajax</button>-->
+    <!--id="ajax-form",type="submit"// field name[html的]-->
+  </form>
+
+  <form id="ajax-form_cardnote" style="display: none;">
+    <!--style="display: none;">    -->
+    <!-- 取text -->
+    <br><br>
+    <===========通知card========================><br>
+      <!--id="ajax-form",type="submit"// field name[html的]-->
+      <!--talk user: <input id="cardnote_u" type="text" name="CNOTEUSER" ><br><!--style="display:none;"><br>    -->
+
+      <button type="submit" id="view_b_cardnote" style="display:block;" onclick="alert('123');">cardnote</button>
+  </form>
+
+  <form id="ajax-form_totalmytalk" style="display: none;">
+    <!--style="display: none;">    -->
+    <!-- 取text -->
+    <br><br>
+    <===========load_mytalk========================><br>
+      <!--id="ajax-form",type="submit"// field name[html的]-->
+      talk user: <input id="totalmytalk_u" type="text" name="TMYTUSER"><br>
+      <!--style="display:none;"><br>    -->
+
+      <button type="submit" id="view_b_totalmytalk" style="display:block;">submit via ajax</button>
+      <!--style="display:none;">submit via ajax</button>-->
+      <!--id="ajax-form",type="submit"// field name[html的]-->
+  </form>
+
+  <form id="ajax-form_totalhottalk" style="display: none;">
+    <!--style="display: none;">    -->
+    <!-- 取text -->
+    <br><br>
+    <===========load_hottalk========================><br>
+      <!--id="ajax-form",type="submit"// field name[html的]-->
+
+      <button type="submit" id="view_b_totalhottalk" style="display:block;">submit via ajax</button>
+      <!--style="display:none;">submit via ajax</button>-->
+      <!--id="ajax-form",type="submit"// field name[html的]-->
+  </form>
+
+
+
+
+
+  <header id="p_header">
+    <img src="pic/head2.png" id="ham">
+    <div id="p_title">我的貼文</div>
+  </header>
+  <div class="p_wrapper">
+    <nav class="p_off" id="p_sidebar" style="left:-60%">
+      <img src="pic/head2.png" id="ham2">
+      <div id="p_head_card_post">
+        <span id="p_header_span">
+          <div id="p_header_span_word" class="p_header_span_word_style">我的貼文</div>
+          <div id="p_header_span_number" class="p_header_span_number_style">20</div>
+        </span>
+        <span id="p_header_span">
+          <div id="p_header_span_word2" class="p_header_span_word_style">我的卡片</div>
+          <div id="p_header_span_number2" class="p_header_span_number_style">20</div>
+        </span>
+      </div>
+      <div id="p_line"></div>
+      <ul class="p_components">
+
+        <li id="p_header_list_word">
+          <img id="p_header_img" src="pic/header1.svg" alt="">
+          <a herf="#" class="p_header_list_word_line">個人檔案</a>
+          <span class="p_head_arrow">></span>
+        </li>
+        <li id="p_header_list_word">
+          <img id="p_header_img" src="pic/header2.svg" alt="">
+          <a id="pay_mycard" onclick='open_collection();' class="p_header_list_word_line">我的收藏</a>
+          <span class="p_head_arrow">></span>
+        </li>
+        <li id="p_header_list_word">
+          <img id="p_header_img" src="pic/header3.svg" alt="">
+          <a onclick='open_search2();' class="p_header_list_word_line">查詢卡片</a>
+          <span class="p_head_arrow">></span>
+        </li>
+        <li id="p_header_list_word">
+          <img id="p_header_img" src="pic/header4.svg" alt="">
+          <a herf="#" class="p_header_list_word_line">最新資訊</a>
+          <span class="p_head_arrow">></span>
+        </li>
+        <li id="p_header_list_word">
+          <img id="p_header_img" src=" pic/header5.svg" alt="">
+          <a herf="#" class="p_header_list_word_line">使用說明</a>
+          <span class="p_head_arrow">></span>
+        </li>
+      </ul>
+
+    </nav>
+    <nav id="p_other_sidebar" class="d-none">
+    </nav>
+
+  </div>
+
+
+  <!-- HTML -->
+  <!-- ==========凱揚=============================================-->
+  <div class="ng_Page_1">
+
+    <div class="ng_Login_Square">How much you have saved</div>
+    <div class="g-signin2" data-onsuccess="onSignInGoogle" style="display:none;margin: 5px 34%;"></div>
+    <div class="fb-login-button" style="display:none;" data-size="medium" data-button-type="continue_with"
+      data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""
+      scope="public_profile,email" onlogin="checkLoginState();"></div>
+    <div class="ng_Column1" onclick="ng_fb()" style="margin:10px 20%;font-size: 1.1em;">Sign Up with <img
+        src="./pic/fbIcon1.png"></div>
+    <div class="ng_Column1 ng_glogin" onclick="ng_gg()" style="margin:10px 20%;font-size: 1.1em;">Sign Up with <img
+        src="./pic/googleIcon1.png"></div>
+    <div class="ng_Column1" id="ng_SignupByEmail">Sign up with email</div>
+    <div class="ng_Column2" style="margin:3% 0 0 20% ;width:25%;font-size: 1.1em;">免費試用</div>
+    <div class="ng_Column2" id="ng_button_Signin" style="width:25%; margin:3% 20% 0 10%;">Sign In</div>
+
+  </div>
+
+
+  <div class="ng_Page_1-3">
+
+    <div class="ng_Login_googlebox">
+      <div style="padding-left: 5%; padding-top:5%;position:absolute;" onclick="ng_function_1()"><img
+          src="./pic/Component 9 – 1.svg"></div>
+      <div class="ng_Welcome" style="padding-top: 10%;font-size: 1.2em;font-weight: bold;margin-bottom: 3vh;">建立賬戶</div>
+      <div class="ng_input1" id="ng_input1" contenteditable="true" data-text="Email:"></div>
+      <div class="ng_input1" id="ng_input2" contenteditable="true" data-text="Name:"></div>
+      <div class="ng_input1" style="-webkit-text-security: disc;" id="ng_input3" contenteditable="true"
+        data-text="Password:"></div>
+      <div class="ng_input1" style="-webkit-text-security: disc;" id="ng_input4" contenteditable="true"
+        data-text="Comfirm Password:"></div>
+
+      <div id=ng_SignupResponse style="color: red;height: 25px;"></div>
+      <div class="ng_button1" onclick="ng_function_3(0)" style="float: left;margin: 3% 15% 7% 25%;">建立</div>
+      <div class="ng_button1" onclick="ng_function_1()" style="float: left;margin: 3% 0 3% 0;">取消</div>
+
+    </div>
+  </div>
+  <div class="ng_Page_2">
+
+    <div class="ng_Login_googlebox">
+      <div id="ng_Page_2_back" style="padding-left: 5%; padding-top:5%;position:absolute;"><img
+          src="./pic/Component 9 – 1.svg"></div>
+      <div class="ng_Welcome" style="padding-top: 20%;font-size: 1.2em;font-weight: bold;">歡迎回來</div>
+      <div class="ng_Column1" onclick="ng_fb()" style="margin:10px 20%;font-size: 1em;">Sign in with <img
+          src="./pic/fbIcon1.png"></div>
+      <div class="ng_Column1 ng_glogin" onclick="ng_gg()" style="margin:10px 20%;font-size: 1em;">Sign in with <img
+          src="./pic/googleIcon1.png"></div>
+      <div class="ng_Column1" id="ng_SigninByEmail" style="margin:10px 20%;font-size: 1em;">Sign in with email</div>
+    </div>
+  </div>
+
+  <div class="ng_Page_2-3">
+
+    <div class="ng_Login_googlebox">
+      <div style="padding-left: 5%; padding-top:5%;position:absolute;" onclick="ng_function_2()"><img
+          src="./pic/Component 9 – 1.svg"></div>
+      <div class="ng_Welcome" style="padding-top: 10%;font-size: 1.2em;font-weight: bold;margin-bottom: 3vh;">登錄</div>
+      <div class="ng_input1" id="ng_input5" contenteditable="true" data-text="Email:"></div>
+      <div class="ng_input1" style="-webkit-text-security: disc;" id="ng_input6" contenteditable="true"
+        data-text="Password:"></div>
+      <div id="ng_SigninResponse" style="color: red; height: 25px;"></div>
+      <div class="ng_button1" onclick="ng_function_4()" style="float: left;margin: 3% 15% 7% 25%;">登錄</div>
+      <div class="ng_button1" onclick="ng_function_2()" style="float: left;margin: 3% 0 3% 0;">取消</div>
+
+    </div>
+  </div>
+  <div class="ng_Page_3">
+    <div class="ng_Login_googlebox">
+      <div class="ng_Login_googlebox_1">選擇賬戶</div>
+      <div class=""></div>
+
+    </div>
+  </div>
+
+
+  <div class="ng_Page_4to8" id="ng_Page_4to8">
+
+    <div class="ng_MainInterface_4to8">
+
+      <div class="ng_MainInterface_4to8_6" style="background-color: #f3f3f3;" id="talk_total">
+
+        <div class="ng_commentTop">
+          <div class="ng_commentTop_intend"  onclick="ng_function6(1)"
+            style="border-right:2px solid grey;">所有貼文</div>
+          <div class="ng_commentTop_intend"  onclick="ng_function6(2)">熱門貼文</div>
+        </div>
+
+        <div class="ng_Post_frame" id="ajax-output_total">
+          <div
+            style="top:3%;left:8%;width: 40%;position:absolute;border-top: 3px solid yellow;margin-bottom: 2px;border-radius: 30px;">
+          </div>
+          <div class="ng_PostColumn">
+
+            <div class="ng_PostColumn_Img">
+              <img style="height:100%;" src="">
+            </div>
+            <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+              <div class="ng_PostColumn_PostType">
+
+              </div>
+
+              <div class="ng_PostColumn_Name">
+                mayagqmansssssssssssssssssssssssssssssssssss
+              </div>
+            </div>
+            <div style="width:70%;height:100%;float: left;">
+              <div class="ng_PostColumn_Title">
+                玉山pi卡當日神速核卡asdasdasdasdacs
+              </div>
+              <div class="ng_PostColumn_Date">
+                2020/05/20
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ng_Post_frame" id="ajax-output_totalhottalk" style="display:none;">
+          <div
+            style="top:3%;left:51.5%;width: 40%;position:absolute;border-top: 3px solid yellow;margin-bottom: 2px;border-radius: 30px;">
+          </div>
+
+
+
+          <div class="ng_PostColumn">
+            <div class="ng_PostColumn_Img">
+              <img style="height:100%;" src="">
+            </div>
+            <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+              <div class="ng_PostColumn_PostType">
+
+              </div>
+
+              <div class="ng_PostColumn_Name">
+                mayagqmansssssssssssssssssssssssssssssssssss
+              </div>
+            </div>
+            <div style="width:70%;height:100%;float: left;">
+              <div class="ng_PostColumn_Title">
+                玉山pi卡當日神速核卡asdasdasdasdacs
+              </div>
+              <div class="ng_PostColumn_Date">
+                2020/05/20
+              </div>
+            </div>
+          </div>
+          <div class="ng_PostColumn">
+            <div class="ng_PostColumn_Img">
+              <img style="height:100%;" src="">
+            </div>
+            <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+              <div class="ng_PostColumn_PostType">
+
+              </div>
+
+              <div class="ng_PostColumn_Name">
+                mayagqmansssssssssssssssssssssssssssssssssss
+              </div>
+            </div>
+            <div style="width:70%;height:100%;float: left;">
+              <div class="ng_PostColumn_Title">
+                玉山pi卡當日神速核卡asdasdasdasdacs
+              </div>
+              <div class="ng_PostColumn_Date">
+                2020/05/20
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="ng_extraButton" style="top:85%" onclick="ng_function7(1)"><img style="margin-top:25%;"
+            src="./pic/Group193.svg"></div>
+
+      </div>
+
+
+      <div class="ng_writePostBlock">
+        <div style="padding-top:5px;right:6.5%;position:absolute;" onclick="ng_function7(2)"><img
+            src="./pic/Component 12 – 5.svg"></div>
+        <div class="ng_writePostBlock_top">
+          <div style="float: left;margin-top: 2%;">文章分類:</div>
+          <div class="ng_writePostBlock_top_class" style="background-color: yellow;"><img style="margin-top: 5%;"
+              src="./pic/Group228-2.svg"></div>
+          <div class="ng_writePostBlock_top_class"><img style="margin-top: 5%;" src="./pic/Group227-1.svg"></div>
+          <div class="ng_writePostBlock_top_class"><img style="margin-top: 5%;" src="./pic/Group226-1.svg"></div>
+          <div class="ng_writePostBlock_top_class"><img style="margin-top: 5%;" src="./pic/Group225-1.svg"></div>
+        </div>
+        <div style="margin-top:2%;">文章標題:</div>
+        <div id="ng_writePostBlock_title" contenteditable="true"></div>
+        <div style="margin-top:2%;">内文:</div>
+        <div id="ng_writePostBlock_main" contenteditable="true">
+
+        </div>
+        <div
+          style="text-align:center;float:left;margin-left:60%;width: 17.4%;height: 5.13%;margin-top:1.5%;border-radius: 30px;background-color: #FFFFFFB3;padding-top: 2%;color: black;"
+          onclick="ng_function_writePost()">發文</div>
+        <div
+          style="text-align:center;float:left;margin-left:5%;width: 17.4%;height: 5.13%;margin-top:1.5%;border-radius: 30px;background-color: #FFFFFFB3;padding-top: 2%;color: black;"
+          onclick="ng_function7(2)">取消</div>
+      </div>
+
+
+
+
+
+      <div id="ng_text"></div>
+      <div id="ng_announce"></div>
+
+    </div>
+
+    <!--<div class="ng_Bottom1"></div>-->
+
+
+  </div>
+
+
+  <div class="ng_Comment" id="ng_Comment" style="display:none;">
+    <div class="ng_Comment_block">
+      <div id="ng_newid" style="padding-left: 5%; padding-top:5%;position:absolute;" onclick="ng_function5()"><img
+          src="./pic/Component 9 – 1.svg"></div>
+      <div class="ng_Comment_block_top">
+        <div class="ng_Comment_block_top_img"></div>
+        <div class="ng_Comment_block_top_name">asndnasdnasd</div>
+        <div class="ng_Comment_block_top_date">2020/06/22</div>
+      </div>
+
+      <div class="ng_Comment_block_middle" style="z-index: 2;">
+
+
+        <div class="ng_Comment_block_main">
+          asdasdasdasdasdadasdasdasdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          asdasdasdasdasdadasdasdasdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdasdasdasdasdadasdasdasdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          asdasdasdasdasdadasdasdasdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          asdasdasdasdasdadasdasdasdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          asdasdasdasdasdadasdasdasdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </div>
+        <div class="ng_Comment_block_comment">
+          <div class="ng_Comment_block_comment_container">
+            <div class="ng_Comment_block_comment_container_rate"></div>
+            <div class="ng_Comment_block_comment_container_pic"></div>
+            <div class="ng_Comment_block_comment_container_name">
+              asdasdasdasdasdadasdasdasdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            </div>
+
+          </div>
+          <div class="ng_Comment_block_comment_main">
+            asdasdasdasdasdadasdasdasdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          </div>
+
+
+
+        </div>
+        <div class="ng_Comment_block_comment">
+          <div class="ng_Comment_block_comment_container">
+            <div class="ng_Comment_block_comment_container_rate"></div>
+            <div class="ng_Comment_block_comment_container_pic"></div>
+            <div class="ng_Comment_block_comment_container_name">
+              asdasdasdasdasdadasdasdasdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            </div>
+
+          </div>
+          <div class="ng_Comment_block_comment_main">
+            asdasdasdasdasdadasdasdasdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          </div>
+
+
+
+        </div>
+
+
+      </div>
+      <div class="ng_extraButton" style="top:68vh;text-align: center;" onclick="ng_function_LikeComment()"><img
+          style="width: 100%;height: 100%;" src="./pic/Component 19 – 4.svg"></div>
+
+      <div class="ng_extraButton" style="top:77vh;text-align: center;" onclick="ng_function8(1)"><img
+          style="margin-top:25%;" src="./pic/Group193.svg"></div>
+
+    </div>
+    <div class="ng_preventClick" id="ng_preventClick1"
+      style="display:none;position: absolute;top:-7%;width: 100vw;height: 100vh;z-index: 4;">
+      <div class="ng_Comment_write">
+        <div style="padding-top:5px;right:6.5%;position:absolute;" onclick="ng_function8(2)"><img
+            src="./pic/Component 12 – 5.svg"></div>
+        <div style="height:11%;margin-left: 3%;">
+          <div class="ng_Comment_rating" onclick="ng_function9(1)"> <img style="width:100% ;height: 100%;"
+              src="./pic/Path 100.svg"> </div>
+          <div class="ng_Comment_rating" onclick="ng_function9(2)"> <img style="width:100% ;height: 100%;"
+              src="./pic/Component 21 – 1.svg"> </div>
+          <div class="ng_Comment_rating" onclick="ng_function9(3)"> <img style="width:100% ;height: 100%;"
+              src="./pic/Component 21 – 1.svg"> </div>
+
+        </div>
+        <div class="ng_Comment_write_main">
+          asdasdasdasdasdadasdasdasdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          asdasdasdasdasdadasdasdasdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          asdasdasdasdasdadasdasdasdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          asdasdasdasdasdadasdasdasdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          asdasdasdasdasdadasdasdasdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          asdasdasdasdasdadasdasdasdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdasdasdasdasdadasdasdasdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+        </div>
+        <div
+          style="text-align:center;float:left;margin-left:60%;width: 17.4%;height: 12.7%;margin-top:1.5%;border-radius: 30px;background-color: #FFFFFFB3;padding-top: 2%;color: black;"
+          onclick="ng_function_writeComment()">留言</div>
+        <div
+          style="text-align:center;float:left;margin-left:5%;width: 17.4%;height: 12.7%;margin-top:1.5%;border-radius: 30px;background-color: #FFFFFFB3;padding-top: 2%;color: black;"
+          onclick="ng_function8(2)">取消</div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <div class="ng_collection">
+    <div class="ng_commentTop">
+      <div class="ng_commentTop_intend" id="ng_comment1"  style="border-right:2px solid grey;">收藏的卡片</div>
+      <div class="ng_commentTop_intend" id="ng_comment2" >收藏的貼文</div>
+    </div>
+
+    <div class="ng_Post_frame" id="ng_Post_frame3">
+      <div
+        style="top:9.2vh;left:8%;width: 40%;position:absolute;border-top: 3px solid yellow;margin-bottom: 2px;border-radius: 30px;">
+      </div>
+      <div class="pay_outerlayer" id="pay_home2" style="top: 10%;display: block"></div>
+
+
+    </div>
+
+    <div class="ng_Post_frame" id="ajax-output_totalmytalk">
+      <div
+        style="top:9.2%;left:51.5%;width: 40%;position: absolute;border-top: 3px solid yellow;margin-bottom: 2px;border-radius: 30px;z-index: 0;">
+      </div>
+    </div>
+
+
+      <div class="ng_PostColumn">
+        <div class="ng_PostColumn_Img">
+          <img style="height:100%;" src="">
+        </div>
+        <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+          <div class="ng_PostColumn_PostType">
+
+          </div>
+
+          <div class="ng_PostColumn_Name">
+            mayagqmansssssssssssssssssssssssssssssssssss
+          </div>
+        </div>
+        <div style="width:70%;height:100%;float: left;">
+          <div class="ng_PostColumn_Title">
+            玉山pi卡當日神速核卡asdasdasdasdacs
+          </div>
+          <div class="ng_PostColumn_Date">
+            2020/05/20
+          </div>
+        </div>
+      </div>
+      <div class="ng_PostColumn">
+        <div class="ng_PostColumn_Img">
+          <img style="height:100%;" src="">
+        </div>
+        <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+          <div class="ng_PostColumn_PostType">
+
+          </div>
+
+          <div class="ng_PostColumn_Name">
+            mayagqmansssssssssssssssssssssssssssssssssss
+          </div>
+        </div>
+        <div style="width:70%;height:100%;float: left;">
+          <div class="ng_PostColumn_Title">
+            玉山pi卡當日神速核卡asdasdasdasdacs
+          </div>
+          <div class="ng_PostColumn_Date">
+            2020/05/20
+          </div>
+        </div>
+      </div>
+      <div class="ng_PostColumn">
+        <div class="ng_PostColumn_Img">
+          <img style="height:100%;" src="">
+        </div>
+        <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+          <div class="ng_PostColumn_PostType">
+
+          </div>
+
+          <div class="ng_PostColumn_Name">
+            mayagqmansssssssssssssssssssssssssssssssssss
+          </div>
+        </div>
+        <div style="width:70%;height:100%;float: left;">
+          <div class="ng_PostColumn_Title">
+            玉山pi卡當日神速核卡asdasdasdasdacs
+          </div>
+          <div class="ng_PostColumn_Date">
+            2020/05/20
+          </div>
+        </div>
+      </div>
+      <div class="ng_PostColumn">
+        <div class="ng_PostColumn_Img">
+          <img style="height:100%;" src="">
+        </div>
+        <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+          <div class="ng_PostColumn_PostType">
+
+          </div>
+
+          <div class="ng_PostColumn_Name">
+            mayagqmansssssssssssssssssssssssssssssssssss
+          </div>
+        </div>
+        <div style="width:70%;height:100%;float: left;">
+          <div class="ng_PostColumn_Title">
+            玉山pi卡當日神速核卡asdasdasdasdacs
+          </div>
+          <div class="ng_PostColumn_Date">
+            2020/05/20
+          </div>
+        </div>
+      </div>
+      <div class="ng_PostColumn">
+        <div class="ng_PostColumn_Img">
+          <img style="height:100%;" src="">
+        </div>
+        <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+          <div class="ng_PostColumn_PostType">
+
+          </div>
+
+          <div class="ng_PostColumn_Name">
+            mayagqmansssssssssssssssssssssssssssssssssss
+          </div>
+        </div>
+        <div style="width:70%;height:100%;float: left;">
+          <div class="ng_PostColumn_Title">
+            玉山pi卡當日神速核卡asdasdasdasdacs
+          </div>
+          <div class="ng_PostColumn_Date">
+            2020/05/20
+          </div>
+        </div>
+      </div>
+      <div class="ng_PostColumn">
+        <div class="ng_PostColumn_Img">
+          <img style="height:100%;" src="">
+        </div>
+        <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+          <div class="ng_PostColumn_PostType">
+
+          </div>
+
+          <div class="ng_PostColumn_Name">
+            mayagqmansssssssssssssssssssssssssssssssssss
+          </div>
+        </div>
+        <div style="width:70%;height:100%;float: left;">
+          <div class="ng_PostColumn_Title">
+            玉山pi卡當日神速核卡asdasdasdasdacs
+          </div>
+          <div class="ng_PostColumn_Date">
+            2020/05/20
+          </div>
+        </div>
+      </div>
+      <div class="ng_PostColumn">
+        <div class="ng_PostColumn_Img">
+          <img style="height:100%;" src="">
+        </div>
+        <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+          <div class="ng_PostColumn_PostType">
+
+          </div>
+
+          <div class="ng_PostColumn_Name">
+            mayagqmansssssssssssssssssssssssssssssssssss
+          </div>
+        </div>
+        <div style="width:70%;height:100%;float: left;">
+          <div class="ng_PostColumn_Title">
+            玉山pi卡當日神速核卡asdasdasdasdacs
+          </div>
+          <div class="ng_PostColumn_Date">
+            2020/05/20
+          </div>
+        </div>
+      </div>
+      <div class="ng_PostColumn">
+        <div class="ng_PostColumn_Img">
+          <img style="height:100%;" src="">
+        </div>
+        <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+          <div class="ng_PostColumn_PostType">
+
+          </div>
+
+          <div class="ng_PostColumn_Name">
+            mayagqmansssssssssssssssssssssssssssssssssss
+          </div>
+        </div>
+        <div style="width:70%;height:100%;float: left;">
+          <div class="ng_PostColumn_Title">
+            玉山pi卡當日神速核卡asdasdasdasdacs
+          </div>
+          <div class="ng_PostColumn_Date">
+            2020/05/20
+          </div>
+        </div>
+      </div>
+      <div class="ng_PostColumn">
+        <div class="ng_PostColumn_Img">
+          <img style="height:100%;" src="">
+        </div>
+        <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+          <div class="ng_PostColumn_PostType">
+
+          </div>
+
+          <div class="ng_PostColumn_Name">
+            mayagqmansssssssssssssssssssssssssssssssssss
+          </div>
+        </div>
+        <div style="width:70%;height:100%;float: left;">
+          <div class="ng_PostColumn_Title">
+            玉山pi卡當日神速核卡asdasdasdasdacs
+          </div>
+          <div class="ng_PostColumn_Date">
+            2020/05/20
+          </div>
+        </div>
+      </div>
+      <div class="ng_PostColumn">
+        <div class="ng_PostColumn_Img">
+          <img style="height:100%;" src="">
+        </div>
+        <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+          <div class="ng_PostColumn_PostType">
+
+          </div>
+
+          <div class="ng_PostColumn_Name">
+            mayagqmansssssssssssssssssssssssssssssssssss
+          </div>
+        </div>
+        <div style="width:70%;height:100%;float: left;">
+          <div class="ng_PostColumn_Title">
+            玉山pi卡當日神速核卡asdasdasdasdacs
+          </div>
+          <div class="ng_PostColumn_Date">
+            2020/05/20
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+  </div>
+
+  <div class="ng_mypost" id="ajax-output_totalmytalk_annmy">
+
+
+    <div class="ng_PostColumn">
+      <div class="ng_PostColumn_Img">
+        <img style="height:100%;" src="">
+      </div>
+      <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+        <div class="ng_PostColumn_PostType">
+
+        </div>
+
+        <div class="ng_PostColumn_Name">
+          mayagqmansssssssssssssssssssssssssssssssssss
+        </div>
+      </div>
+      <div style="width:70%;height:100%;float: left;">
+        <div class="ng_PostColumn_Title">
+          玉山pi卡當日神速核卡asdasdasdasdacs
+        </div>
+        <div class="ng_PostColumn_Date">
+          2020/05/20
+        </div>
+      </div>
+    </div>
+    <div class="ng_PostColumn">
+      <div class="ng_PostColumn_Img">
+        <img style="height:100%;" src="">
+      </div>
+      <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+        <div class="ng_PostColumn_PostType">
+
+        </div>
+
+        <div class="ng_PostColumn_Name">
+          mayagqmansssssssssssssssssssssssssssssssssss
+        </div>
+      </div>
+      <div style="width:70%;height:100%;float: left;">
+        <div class="ng_PostColumn_Title">
+          玉山pi卡當日神速核卡asdasdasdasdacs
+        </div>
+        <div class="ng_PostColumn_Date">
+          2020/05/20
+        </div>
+      </div>
+    </div>
+    <div class="ng_PostColumn">
+      <div class="ng_PostColumn_Img">
+        <img style="height:100%;" src="">
+      </div>
+      <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+        <div class="ng_PostColumn_PostType">
+
+        </div>
+
+        <div class="ng_PostColumn_Name">
+          mayagqmansssssssssssssssssssssssssssssssssss
+        </div>
+      </div>
+      <div style="width:70%;height:100%;float: left;">
+        <div class="ng_PostColumn_Title">
+          玉山pi卡當日神速核卡asdasdasdasdacs
+        </div>
+        <div class="ng_PostColumn_Date">
+          2020/05/20
+        </div>
+      </div>
+    </div>
+    <div class="ng_PostColumn">
+      <div class="ng_PostColumn_Img">
+        <img style="height:100%;" src="">
+      </div>
+      <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+        <div class="ng_PostColumn_PostType">
+
+        </div>
+
+        <div class="ng_PostColumn_Name">
+          mayagqmansssssssssssssssssssssssssssssssssss
+        </div>
+      </div>
+      <div style="width:70%;height:100%;float: left;">
+        <div class="ng_PostColumn_Title">
+          玉山pi卡當日神速核卡asdasdasdasdacs
+        </div>
+        <div class="ng_PostColumn_Date">
+          2020/05/20
+        </div>
+      </div>
+    </div>
+    <div class="ng_PostColumn">
+      <div class="ng_PostColumn_Img">
+        <img style="height:100%;" src="">
+      </div>
+      <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+        <div class="ng_PostColumn_PostType">
+
+        </div>
+
+        <div class="ng_PostColumn_Name">
+          mayagqmansssssssssssssssssssssssssssssssssss
+        </div>
+      </div>
+      <div style="width:70%;height:100%;float: left;">
+        <div class="ng_PostColumn_Title">
+          玉山pi卡當日神速核卡asdasdasdasdacs
+        </div>
+        <div class="ng_PostColumn_Date">
+          2020/05/20
+        </div>
+      </div>
+    </div>
+    <div class="ng_PostColumn">
+      <div class="ng_PostColumn_Img">
+        <img style="height:100%;" src="">
+      </div>
+      <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+        <div class="ng_PostColumn_PostType">
+
+        </div>
+
+        <div class="ng_PostColumn_Name">
+          mayagqmansssssssssssssssssssssssssssssssssss
+        </div>
+      </div>
+      <div style="width:70%;height:100%;float: left;">
+        <div class="ng_PostColumn_Title">
+          玉山pi卡當日神速核卡asdasdasdasdacs
+        </div>
+        <div class="ng_PostColumn_Date">
+          2020/05/20
+        </div>
+      </div>
+    </div>
+    <div class="ng_PostColumn">
+      <div class="ng_PostColumn_Img">
+        <img style="height:100%;" src="">
+      </div>
+      <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+        <div class="ng_PostColumn_PostType">
+
+        </div>
+
+        <div class="ng_PostColumn_Name">
+          mayagqmansssssssssssssssssssssssssssssssssss
+        </div>
+      </div>
+      <div style="width:70%;height:100%;float: left;">
+        <div class="ng_PostColumn_Title">
+          玉山pi卡當日神速核卡asdasdasdasdacs
+        </div>
+        <div class="ng_PostColumn_Date">
+          2020/05/20
+        </div>
+      </div>
+    </div>
+    <div class="ng_PostColumn">
+      <div class="ng_PostColumn_Img">
+        <img style="height:100%;" src="">
+      </div>
+      <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+        <div class="ng_PostColumn_PostType">
+
+        </div>
+
+        <div class="ng_PostColumn_Name">
+          mayagqmansssssssssssssssssssssssssssssssssss
+        </div>
+      </div>
+      <div style="width:70%;height:100%;float: left;">
+        <div class="ng_PostColumn_Title">
+          玉山pi卡當日神速核卡asdasdasdasdacs
+        </div>
+        <div class="ng_PostColumn_Date">
+          2020/05/20
+        </div>
+      </div>
+    </div>
+    <div class="ng_PostColumn">
+      <div class="ng_PostColumn_Img">
+        <img style="height:100%;" src="">
+      </div>
+      <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+        <div class="ng_PostColumn_PostType">
+
+        </div>
+
+        <div class="ng_PostColumn_Name">
+          mayagqmansssssssssssssssssssssssssssssssssss
+        </div>
+      </div>
+      <div style="width:70%;height:100%;float: left;">
+        <div class="ng_PostColumn_Title">
+          玉山pi卡當日神速核卡asdasdasdasdacs
+        </div>
+        <div class="ng_PostColumn_Date">
+          2020/05/20
+        </div>
+      </div>
+    </div>
+    <div class="ng_PostColumn">
+      <div class="ng_PostColumn_Img">
+        <img style="height:100%;" src="">
+      </div>
+      <div style="width:10%;height:100%;margin-right: 1%;float: left;">
+        <div class="ng_PostColumn_PostType">
+
+        </div>
+
+        <div class="ng_PostColumn_Name">
+          mayagqmansssssssssssssssssssssssssssssssssss
+        </div>
+      </div>
+      <div style="width:70%;height:100%;float: left;">
+        <div class="ng_PostColumn_Title">
+          玉山pi卡當日神速核卡asdasdasdasdacs
+        </div>
+        <div class="ng_PostColumn_Date">
+          2020/05/20
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <div class="ng_preventClick" id="ng_signuptocontinue"
+    style="z-index:10;display:none;position: absolute;top:0;width: 100vw;height: 100vh;">
+    <div class="ng_signuptocontinue">
+      <div style="top:30%;right:16%;position:absolute;" onclick="ng_function10(2)"><img
+          src="./pic/Component 12 – 1.svg"></div>
+      <div style="width: 100%;text-align: center;font-size: 1.7em;font-weight:bolder;margin-bottom: 5%;">登入以繼續</div>
+
+      <div class="ng_Column3" onclick="ng_fb()">Sign Up with <img src="./pic/fbIcon1.png"></div>
+      <div class="ng_Column3 ng_glogin" onclick="ng_gg()">Sign Up with <img src="./pic/googleIcon1.png"></div>
+      <div class="ng_Column3" id="ng_SignupByEmail" style="padding-top: 7%;">Sign up with email</div>
+      <div style="font-size:0.75em;height:10%;margin-top: 5%;">已經有賬戶了?<span onclick="ng_function11()"
+          style="color: blue;text-decoration: underline;">登錄</span></div>
+
+
+
+    </div>
+  </div>
+
+  <div class="ng_notification" id="ajax-output_notice">
+
+    <div class="ng_notification_block">
+
+      <div class="ng_notification_block_img">
+        <img src="./pic/Path 68.svg">
+
+      </div>
+      <div class="ng_notification_block_content">
+        <div class="ng_notification_block_content_topic">
+          asdasdasdasdasdadasdasdasdsaaaaaaaaaaaaa123456789012345678901234567890aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </div>
+        <div class="ng_notification_block_content_detail">
+          asdasdasdasdasda
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+  </div>
+
+  <!--=========form [ajax-form] ajax取值================================================================================-->
+  <form id="ajax-form_text" style="display: none;">
+    <!-- 取text -->
+    <!--id="ajax-form",type="submit"// field name[html的]-->
+    talk topic: <input id="view_t" type="text" name="TOPIC" style="display:none;"><br>
+    talk hot: <input id="view_h" type="text" name="COM_H" style="display:none;"><br>
+    talk comment: <input id="view_c" type="text" name="COM_T" style="display:none;"><br>
+    talk user: <input id="view_u" type="text" name="COM_U" style="display:none;"><br>
+    talk userpict: <input id="view_up" type="text" name="COM_UP" style="display:none;"><br>
+
+
+
+    <button type="submit" id="view_b_text" style="display:none;">submit via ajax</button>
+    <!--id="ajax-form",type="submit"// field name[html的]-->
+  </form>
+
+  <!--=========form [ajax-form] ajax取值================================================================================-->
+  <form id="ajax-form_total">
+    <!-- load -->
+    <!--id="ajax-form",type="submit"// field name[html的]-->
+    <!--talk topic: <input type="text" name="TOPIC"><br>-->
+    <button id="load_talk" type="submit" style="display:none;">text</button>
+    <!--id="ajax-form",type="submit"// field name[html的]-->
+  </form>
+
+  <!-- ==========智平=============================================-->
+  <!--p_ni最外面ㄉdiv-->
+  <div class=" pay_outlayer" id="pay_search">
+
+    <!--搜尋欄-->
+    <div class="p_search">
+      <input type="text" name="search" id="p_search_text">
+      <img src="pic/q.svg" class="p_q">
+    </div>
+
+
+
+    <div class="p_select-btn-show">
+      <input class="p_select-font" type="submit" name="select" value="+ 篩選條件">
+    </div>
+    <div class="p_hot_card">
+      <img class="p_hot_card_select" src="pic/arrow.svg" alt="" style="width:4%">
+      <div class="p_hot_card_header p_hot_card_select">
+        本月五大熱門卡片
+      </div>
+      <ul class="p_hot_card_list">
+        <li class="p_card" id=p_8>
+          <img class="p_card_img2"
+            src="https://images.contentstack.io/v3/assets/blt4ca32b8be67c85f8/blt14c79531e539d290/5c66732fab181759419c7ca0/ESUN0024.png?width=178&height=112&auto=webp">
+        </li>
+        <li class="p_card" id=p_20>
+          <img class="p_card_img2"
+            src="https://images.contentstack.io/v3/assets/blt4ca32b8be67c85f8/blt4556814829dcedb7/5e001f1c7651f865a36d97b5/pidebit230x144.png?width=178&height=112&auto=webp">
+        </li>
+        <li class="p_card" id=p_64>
+          <img class="p_card_img2"
+            src="https://images.contentstack.io/v3/assets/blt4ca32b8be67c85f8/blta1c90ac9101a767c/5c66732fc7b669b241760396/ESUN0025.png?width=178&height=112&auto=webp">
+        </li>
+        <li class="p_card" id=p_77>
+          <img class="p_card_img2"
+            src="https://images.contentstack.io/v3/assets/blt4ca32b8be67c85f8/bltf5c12f260b7e3654/5d6387f10c0c016ead6d9f89/C_250x157Y.png?width=178&height=112&auto=webp">
+        </li>
+        <li class="p_card" id=p_88>
+          <img class="p_card_img2"
+            src="https://images.contentstack.io/v3/assets/blt4ca32b8be67c85f8/blt055269f2999f75e9/5d6f50596e51e63c133bef4c/HS_230x144.png?width=178&height=112&auto=webp">
+        </li>
+        <!-- 卡片內容 -->
+
+      </ul>
+    </div>
+
+    <div class="p_select-btn-extend d-none">
+      <div class="p_select_detail">
+        <div id="p_select-font2">+ 篩選條件</div>
+        <div class="p_select_detail2">
+          <div class="p_wrap-bank d-none">
+            <span id="p_bank">發卡銀行</span>
+            <form id="p_bank-option">
+              <select size="3" id="p_bank-option-content" name="yourbank">
+                　<option class="p_option_size" value="玉山銀行">玉山銀行</option>
+                　<option class="p_option_size" value="國泰世華">國泰世華</option>
+                　<option class="p_option_size" value="永豐銀行">永豐銀行</option>
+                　<option class="p_option_size" value="花旗銀行">花旗銀行</option>
+                　<option class="p_option_size" value="滙豐銀行">滙豐銀行</option>
+                　<option class="p_option_size" value="渣打銀行">渣打銀行</option>
+                　<option class="p_option_size" value="中國信託">中國信託</option>
+                　<option class="p_option_size" value="台新銀行">台新銀行</option>
+                　<option class="p_option_size" value="台北富邦">台北富邦</option>
+                <option class="p_option_size" value="星展銀行">星展銀行</option>
+                <option class="p_option_size" value="王道銀行">王道銀行</option>
+                <option class="p_option_size" value="新光銀行">新光銀行</option>
+                <option class="p_option_size" value="聯邦銀行">聯邦銀行</option>
+                <option class="p_option_size" value="美國運通">美國運通</option>
+                <option class="p_option_size" value="遠東商銀">遠東商銀</option>
+                <option class="p_option_size" value="臺灣企銀">臺灣企銀</option>
+                <option class="p_option_size" value="彰化銀行">彰化銀行</option>
+                <option class="p_option_size" value="華泰銀行">華泰銀行</option>
+                <option class="p_option_size" value="華南銀行">華南銀行</option>
+                <option class="p_option_size" value="第一銀行">第一銀行</option>
+                <option class="p_option_size" value="高雄銀行">高雄銀行</option>
+                <option class="p_option_size" value="安泰銀行">安泰銀行</option>
+                <option class="p_option_size" value="合作金庫">合作金庫</option>
+                <option class="p_option_size" value="兆豐銀行">兆豐銀行</option>
+                <option class="p_option_size" value="凱基銀行">凱基銀行</option>
+                <option class="p_option_size" value="台灣樂天">台灣樂天</option>
+                <option class="p_option_size" value="臺灣銀行">臺灣銀行</option>
+                <option class="p_option_size" value="台中銀行">台中銀行</option>
+                <option class="p_option_size" value="日盛銀行">日盛銀行</option>
+                <option class="p_option_size" value="元大銀行">元大銀行</option>
+                <option class="p_option_size" value="土地銀行">土地銀行</option>
+                <option class="p_option_size" value="三信銀行">三信銀行</option>
+                <option class="p_option_size" value="上海商銀">上海商銀</option>
+                <option class="p_option_size" value="陽信銀行">陽信銀行</option>
+
+
+                <!--                                    要加很多選項-->
+              </select>
+            </form>
+          </div>
+
+          <div class="p_equal p_underline">國內回饋</div>
+          <div class="p_equal">
+            <span class="text-size p_border_style" id="p_in_less1"> &lt 1.00% </span>
+            <span class="text-size p_border_style" id="p_in_bigger1"> &gt 1.00% </span>
+            <span class="text-size p_border_style" id="p_in_bigger25"> &gt 2.50% </span>
+          </div>
+
+          <div class="p_equal p_underline">國外回饋</div>
+          <div class="p_equal">
+            <span class="text-size p_border_style" id="p_out_less2"> &lt 2.00% </span>
+            <span class="p_border_style" id="p_out_bigger2"> &gt 2.00% </span>
+          </div>
+
+          <div class="p_equal p_underline">年費</div>
+          <div class="p_equal">
+            <span class="text-size p_border_style" id="p_y_none"> NTD 0 </span>
+            <span class="text-size p_border_style" id="p_y_less3"> &lt NTD 3000 </span>
+            <span class="p_border_style" id="p_y_bigger3"> &gt NTD 3000 </span>
+          </div>
+
+          <div class="p_equal p_underline">國際組織</div>
+          <div class="p_equal">
+            <span class="text-size p_border_style" id="p_mastercard"> Mastercard </span>
+            <span class="text-size p_border_style" id="p_visa"> VISA </span>
+            <span class="text-size p_border_style" id="p_ae"> AE </span>
+            <span class="p_border_style" id="p_jcb"> JCB </span>
+          </div>
+
+          <div id="p_equal_button">
+            <input class="submit-size" name="submit" type="submit" value="搜尋"
+              style="margin-left:22%;color:black;background-color:#FFDD00;font-weight:bold;">
+            <input class="p_submit_cancel" type="submit" value="取消" id="p_cancel">
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="p_card_display d-none">
+      <div class="p_card_display_header_seperate">
+        <span class="p_card_display_header">
+          <!-- <span class="p_card_display_header_style">國內&lt1%</span>
+          <span class="p_card_display_header_style">國外&gt2%</span>
+          <span class="p_card_display_header_style">年費&gt3K</span> -->
+
+        </span>
+        <span class="p_card_display_header_style_close" id="p_close">×</span>
+      </div>
+
+      <div class="p_card_display_block">
+        <div class="p_card_detail d-none">
+
+          <!-- <div class="p_card_page_back">
+            <img class="p_card_page_back_icon" style="margin-left:3%;width:10%" src="https://img.icons8.com/doodle/96/000000/return--v1.png" />
+          </div>
+          <img class="p_card_detail_img" src=""> -->
+
+
+          <!-- <div class="p_card_detail_data">
+            <div style="height:7%;width:95%;margin: 0 2.5% 0 2.5%;display:flex;flex-direction:row;padding:2em 0 0 0;">
+              <span class="p_data_btn_1" style="border-radius: 1em;background-color:#F3F3F3;flex:1;padding:0.8% 1% 2% 1%;font-family:Segoe UI;font-size:2.2vmin/1;font-weight:bold">優惠訊息
+              </span>
+              <span class="p_data_btn_2" style="flex:1;padding:0.8% 1% 2% 1%;font-family:Segoe UI;font-size:2.2vmin/1;color:white;font-weight:bold">申辦條件
+              </span>
+              <span class="p_data_btn_3" style="flex:1;padding:0.8% 1% 2% 1%;font-family:Segoe UI;font-size:2.2vmin/1;color:white;font-weight:bold">卡片相關
+              </span>
+            </div>
+            <div style="width:95%;margin:3% 2.5% 0 2.5%;height:70%;">
+              <div class="p_data_1" style="width:100%;height:100%;overflow-y:scroll;font-family:Segoe UI;font-weight:bold;font-size:1.8vmin/1;color:white;line-height:2vmin/1">
+              </div>
+              <div class="p_data_2 d-none" style="width:100%;height:100%;overflow-y:scroll; background-color:grey;font-family:Segoe UI;font-weight:bold;font-size:1.8vmin/1;color:white;line-height:2vmin/1">
+              </div>
+              <div class="p_data_3 d-none" style="width:100%;height:100%;overflow-y:scroll; background-color:grey;font-family:Segoe UI;font-weight:bold;font-size:1.8vmin/1;color:white;line-height:2vmin/1">
+              </div>
+
+            </div>
+
+            <div style="height:15%;width:100%y;margin-top:1em;">' +
+              <span id=""class="p_addwallet" style="font-size:2.2vmin/1;font-weight:bold;color:white;font-family:Segoe UI;padding:0 5% 2% 5%;margin:2% 0 0 0">匯入錢包</span>
+              <span id=""class="p_addlike"style="font-size:2.2vmin/1;font-weight:bold;color:white;font-family:Segoe UI;padding:0 5% 2% 5%;margin:2% 0 0 0">加入收藏</span>
+            </div>
+          </div> -->
+
+
+
+        </div>
+        <ul class="p_card_list " id="p_list">
+
+          <!-- 卡片內容 -->
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================智平 ===================================-->
+
+  <!-- ==========鈺鈴=============================================-->
+  <div class="pay_outerlayer" id="pay_home">
+    <!--卡片-->
+    <ul class="pay_cardlist">
+      <!--<li id="a" class="pay_card">AA</li>
+            <li id="b" class="pay_card">BB</li>
+            <li id="c" class="pay_card">CC</li>
+            <li id="d" class="pay_card">DD</li>
+            <li id="e" class="pay_card">EE</li>-->
+    </ul>
+  </div>
+  <div class="ng_preventClick" id="p_addcard_block_frame"
+    style="z-index:10;display:none;position: absolute;top:0;width: 100vw;height: 100vh;">
+    <div class="p_addcard_block">
+      <div class="p_addcard_header">
+        <span class="p_addcard_header1">新增卡片</span>
+        <span class="p_addcard_header2">×</span>
+      </div>
+      <div class="p_addcard_word">發卡銀行</div>
+      <form style="height: 10%;">
+        <select size="1" name="" class="p_addcard_form" id="p_addcard_form1">
+          　　<option class="p_option_size" value="玉山銀行">玉山銀行</option>
+          　<option class="p_option_size" value="國泰世華">國泰世華</option>
+          　<option class="p_option_size" value="永豐銀行">永豐銀行</option>
+          　<option class="p_option_size" value="花旗銀行">花旗銀行</option>
+          　<option class="p_option_size" value="滙豐銀行">滙豐銀行</option>
+          　<option class="p_option_size" value="渣打銀行">渣打銀行</option>
+          　<option class="p_option_size" value="中國信託">中國信託</option>
+          　<option class="p_option_size" value="台新銀行">台新銀行</option>
+          　<option class="p_option_size" value="台北富邦">台北富邦</option>
+          <option class="p_option_size" value="星展銀行">星展銀行</option>
+          <option class="p_option_size" value="王道銀行">王道銀行</option>
+          <option class="p_option_size" value="新光銀行">新光銀行</option>
+          <option class="p_option_size" value="聯邦銀行">聯邦銀行</option>
+          <option class="p_option_size" value="美國運通">美國運通</option>
+          <option class="p_option_size" value="遠東商銀">遠東商銀</option>
+          <option class="p_option_size" value="臺灣企銀">臺灣企銀</option>
+          <option class="p_option_size" value="彰化銀行">彰化銀行</option>
+          <option class="p_option_size" value="華泰銀行">華泰銀行</option>
+          <option class="p_option_size" value="華南銀行">華南銀行</option>
+          <option class="p_option_size" value="第一銀行">第一銀行</option>
+          <option class="p_option_size" value="高雄銀行">高雄銀行</option>
+          <option class="p_option_size" value="安泰銀行">安泰銀行</option>
+          <option class="p_option_size" value="合作金庫">合作金庫</option>
+          <option class="p_option_size" value="兆豐銀行">兆豐銀行</option>
+          <option class="p_option_size" value="凱基銀行">凱基銀行</option>
+          <option class="p_option_size" value="台灣樂天">台灣樂天</option>
+          <option class="p_option_size" value="臺灣銀行">臺灣銀行</option>
+          <option class="p_option_size" value="台中銀行">台中銀行</option>
+          <option class="p_option_size" value="日盛銀行">日盛銀行</option>
+          <option class="p_option_size" value="元大銀行">元大銀行</option>
+          <option class="p_option_size" value="土地銀行">土地銀行</option>
+          <option class="p_option_size" value="三信銀行">三信銀行</option>
+          <option class="p_option_size" value="上海商銀">上海商銀</option>
+          <option class="p_option_size" value="陽信銀行">陽信銀行</option>
+
+        </select>
+      </form>
+      <div class="p_addcard_word">卡片名稱</div>
+      <form style="height: 10%;">
+        <select size="1" name="" class="p_addcard_form" id="p_addcard_form2">
+          　
+        </select>
+      </form>
+      <div class="p_addcard_card" style="display: none">
+        <div id="p_addcard_img_block" style="height: 70%;width: 90%;margin: 5% 5% 5% 5%;">
+          <img id="p_addcard_img" src="" alt="" style="width:100%">
+        </div>
+        <div style="height: 15%;">
+          <input type="button" value="確認" id="p_addcard_button">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--=========form [ajax-form] ajax取值================================================================================-->
+  <div class="pay_outerlayer" id="pay_view">
+    <!--卡片-->
+    <!--<div class="pay_inlayer">-->
+
+    <div class="pay_cimg" id="pay_cimg"></div>
+
+
+
+
+    <ul class="pay_spendlist" id="pay_spendlist">
+      <div class="pay_spend" id="pay_feedback"></div>
+
+      <!--<li id="1" class="pay_spend">AA</li>
+            <li id="2" class="pay_spend">BB</li>
+            <li id="3" class="pay_spend">CC</li>
+            <li id="4" class="pay_spend">DD</li>
+            <li id="5" class="pay_spend">EE</li>
+            <li id="5" class="pay_spend">FF</li>-->
+    </ul>
+    <table id="pay_in_out">
+      <tr>
+        <td id="payin" class="payin" onclick="payway();">國內回饋</td>
+        <td id="payout" class="payout" onclick="payway();">國外回饋</td>
+      </tr>
+    </table>
+    <ul class="pay_keyboard" id="pay_keyboard">
+
+      <table border="1" id="pay_ans">
+        　<tr class="pay_res">
+          　<td class="pay_left" width="85%">
+            <input class="pay_result" id="pay_result" value=0 readonly="readonly">
+            <input class="pay_resultdown" id="pay_resultmid" value='全額 - 回饋' readonly="readonly">
+
+            <input class="pay_resultdown" id="pay_resultdown" value='0 - 0' readonly="readonly">
+
+          </td>
+          <td class="pay_right"><button id="pay_checkin" class="pay_in" onclick="keyin(10);"> </button>
+          </td>
+          　
+        </tr>
+      </table>
+      <!--<div class="pay_key" id="pay_result">-->
+
+      <table id="pay_board">
+        <tr>
+          <td><button id="pay_1" class="pay_in" onclick="keyin('1');"
+              style="background-image:url(./res/img/key/b1.png);">1</button></td>
+          <td><button id="pay_2" class="pay_in" onclick="keyin('2');"
+              style="background-image:url(./res/img/key/b2.png);">2</button></td>
+          <td><button id="pay_3" class="pay_in" onclick="keyin('3');"
+              style="background-image:url(./res/img/key/b3.png);">3</button></td>
+        </tr>
+
+        <tr>
+          <td><button id="pay_4" class="pay_in" onclick="keyin('4');"
+              style="background-image:url(./res/img/key/b4.png);">4</button></td>
+          <td><button id="pay_5" class="pay_in" onclick="keyin('5');"
+              style="background-image:url(./res/img/key/b5.png);">5</button></td>
+          <td><button id="pay_5" class="pay_in" onclick="keyin('6');"
+              style="background-image:url(./res/img/key/b6.png);">6</button></td>
+        </tr>
+
+        <tr>
+          <td><button id="pay_6" class="pay_in" onclick="keyin('7');"
+              style="background-image:url(./res/img/key/b7.png);">7</button></td>
+          <td><button id="pay_7" class="pay_in" onclick="keyin('8');"
+              style="background-image:url(./res/img/key/b8.png);">8</button></td>
+          <td><button id="pay_8" class="pay_in" onclick="keyin('9');"
+              style="background-image:url(./res/img/key/b9.png);">9</button></td>
+        </tr>
+
+        <tr>
+          <td><button id="pay_dot" class="pay_in" onclick="keyin('.');"
+              style="background-image:url(./res/img/key/bdot.png);">.</button></td>
+          <td><button id="pay_9" class="pay_in" onclick="keyin('0');"
+              style="background-image:url(./res/img/key/b0.png);">0</button></td>
+          <td><button id="pay_back" class="pay_in" onclick="keyin('11');"
+              style="background-image:url(./res/img/key/bback.png);">
+              <</button> </td> </tr> </table> <!--<li id="pay_1" class="pay_in">A</li>
+                <li id="pay_2" class="pay_in">B</li>
+                <li id="pay_3" class="pay_in">C</li>
+                <li id="pay_4" class="pay_in">D</li>
+                <li id="pay_5" class="pay_in">E</li>
+                <li id="pay_5" class="pay_in">F</li>-->
+                <!--</div>-->
+    </ul>
+    <div class="pay_cal" id="pay_cal" onclick="keyboardshow();"></div>
+    <div class="pay_calback" id="pay_calback" onclick="keyboardback();"></div>
+
+    <!--</div>-->
+  </div>
+  <!--=========form [ajax-form] ajax取值================================================================================-->
+  <form id="ajax-form">
+    <!--id="ajax-form",type="submit"// field name[html的]-->
+    <!--user: <input type="text" name="USER" value="user1"><br>
+  card: <input id="c_choose" type="text" name="CARD"><br>
+  spend: <input type="text" name="SPEND" value="0"><br>-->
+    <button id="b_choose" type="submit" class="hide">submit via ajax</button>
+    <!--id="ajax-form",type="submit"// field name[html的]-->
+    <input type="hidden" id="u_choose" name="USER"><br> <!-- user: -->
+    <input type="hidden" id="c_choose" type="text" name="CARD"><br> <!-- card: -->
+    <input type="hidden" id="s_choose" name="SPEND"><br> <!-- spend: -->
+    <!--id="ajax-form",type="submit"// field name[html的]-->
+    <input type="hidden" id="m_choose" name="IMG"><br> <!-- user: -->
+    <input type="hidden" id="i_choose" type="text" name="IN"><br> <!-- card: -->
+    <input type="hidden" id="o_choose" name="OUT"><br> <!-- spend: -->
+
+    <input type="hidden" id="y_choose" name="YEAR"><br> <!-- user: -->
+    <input type="hidden" id="mon_choose" type="text" name="MONTH"><br> <!-- card: -->
+    <input type="hidden" id="d_choose" name="DATE"><br> <!-- spend: -->
+    <input type="hidden" id="pw_choose" name="PAYWAY"><br> <!-- spend: -->
+  </form>
+
+  <!--=========form [ajax-form] ajax取值================================================================================-->
+  <form id="ajax-form_card_load" style="display:none;">
+    <!-- load -->
+    <!--id="ajax-form",type="submit"// field name[html的]-->
+    user: <input type="hidden" id="u_load" name="USER_LOAD" value="user2">
+    <button id="b_load" type="submit">text</button>
+    <!--id="ajax-form",type="submit"// field name[html的]-->
+  </form>
+
+
+
+
+  <!--=========form [ajax-form] ajax cardlike================================================================================-->
+  <form id="ajax-form_cardlike">
+    <!--id="ajax-form",type="submit"// field name[html的]-->
+    <!--user: <input type="text" name="USER" value="user1"><br>
+  card: <input id="c_choose" type="text" name="CARD"><br>
+  spend: <input type="text" name="SPEND" value="0"><br>-->
+    <button id="b_choose_cardlike" type="submit" class="hide">submit via ajax</button>
+    <!--id="ajax-form",type="submit"// field name[html的]-->
+    <input type="hidden" id="u_choose_cardlike" name="USER_cardlike"><br> <!-- user: -->
+    <input type="hidden" id="c_choose_cardlike" type="text" name="CARD_cardlike"><br> <!-- card: -->
+    <input type="hidden" id="s_choose_cardlike" name="SPEND_cardlike"><br> <!-- spend: -->
+    <!--id="ajax-form",type="submit"// field name[html的]-->
+    <input type="hidden" id="m_choose_cardlike" name="IMG_cardlike"><br> <!-- user: -->
+    <input type="hidden" id="i_choose_cardlike" type="text" name="IN_cardlike"><br> <!-- card: -->
+    <input type="hidden" id="o_choose_cardlike" name="OUT_cardlike"><br> <!-- spend: -->
+
+    <input type="hidden" id="y_choose_cardlike" name="YEAR_cardlike"><br> <!-- user: -->
+    <input type="hidden" id="mon_choose_cardlike" type="text" name="MONTH_cardlike"><br> <!-- card: -->
+    <input type="hidden" id="d_choose_cardlike" name="DATE_cardlike"><br> <!-- spend: -->
+    <input type="hidden" id="pw_choose_cardlike" name="PAYWAY_cardlike"><br> <!-- spend: -->
+  </form>
+
+  <!--=========form [ajax-form] ajax取值================================================================================-->
+  <form id="ajax-form_card_load_cardlike" style="display:none;">
+    <!-- load -->
+    <!--id="ajax-form",type="submit"// field name[html的]-->
+    user: <input type="hidden" id="u_load_cardlike" name="USER_LOAD_cardlike" value="user2">
+    <button id="b_load_cardlike" type="submit">text</button>
+    <!--id="ajax-form",type="submit"// field name[html的]-->
+  </form>
+
+
+
+
+  <div class="p_buttom" id="bottom_buttom">
+    <span id="home" class="p_bottom_click p_bottom_img" style="flex:1 ;padding-top: 2%;" onclick='open_talk()'> <img
+        src="pic/home.svg" alt="" style="width:19%"></span>
+    <span id="notification" class="p_bottom_img" style="flex:1 ;padding-top: 2%;" onclick='open_notification()'><img
+        src="pic/ring.svg" alt="" style="width:19%"></span>
+    <span id="bottom_card" class="p_bottom_img" style="flex:1 ;padding-top: 2%;" onclick='open_pay()'> <img
+        src="pic/card.svg" alt="" style="width:26%"></span>
+  </div>
+
+  <!--================count=========================================-->
+  <form id="ajax-form_load_count" style="display:none;">
+    <!-- 取text -->
+    <br><br>
+    <===========通知========================><br>
+      <!--id="ajax-form",type="submit"// field name[html的]-->
+      talk user: <input id="load_count_u" type="text" name="NOTEUSER_load_count"><br>
+      <!--style="display:none;"><br>    -->
+
+      <button type="submit" id="view_b_load_count" style="display:block;">submit via ajax</button>
+      <!--style="display:none;">submit via ajax</button>-->
+      <!--id="ajax-form",type="submit"// field name[html的]-->
+  </form>
+
+
+
+
+  <!--=========form [ajax-output] ajax回顯================================================================================-->
+  <h1 id="ajax-output"></h1>
+  <script src="talk.js"></script>
+  <script src="./exercise.js"></script>
+  <script src="main.js"></script>
+
+
+
+  <script>
+    //<!-- ==========合併流程=============================================-->
+    function open_pay() {
+      ham_hide();
+      $("#bottom_buttom")[0].style.opacity = '1';
+      //document.getElementById("bottom_buttom").style.display= 'block';
+
+      document.getElementById("pay_view").style.display = "none";
+            document.getElementById("pay_search").style.display = "none";
+            document.getElementById("ajax-output_notice").style.display = "none";
+            document.getElementById("ajax-output_totalmytalk_annmy").style.display = "none";
+            $('.ng_collection').css('display','none');
+            document.getElementById("ng_Comment").style.display = "none";
+            document.getElementById("ng_Page_4to8").style.display = "none";
+      document.getElementById("pay_home").style.display = "block";
+      document.getElementById("u_load").value = pay_user;
+      $('#b_load').get(0).click();
+      $('#p_title').html("我的卡片");
+
+    }
+
+    function open_collection() {
+
+      ham_hide();
+      $("#bottom_buttom")[0].style.opacity = '1';
+
+      document.getElementById("pay_home").style.display = "none";
+            document.getElementById("pay_view").style.display = "none";
+            document.getElementById("pay_search").style.display = "none";
+            document.getElementById("ajax-output_notice").style.display = "none";
+            document.getElementById("ajax-output_totalmytalk_annmy").style.display = "none";
+           
+            document.getElementById("ng_Comment").style.display = "none";
+            document.getElementById("ng_Page_4to8").style.display = "none";
+      $(".ng_collection").css({
+        "display": "block"
+      });
+      $('#p_title').html("我的收藏");
+      $("#u_load_cardlike").val(pay_user);
+      $("#b_load_cardlike").get(0).click();
+
+    }
+
+    function open_search2() {
+      ham_hide();
+      $("#bottom_buttom")[0].style.opacity = '0';
+
+      $(".ng_collection").css({
+        "display": "none"
+      });
+
+      document.getElementById("pay_home").style.display = "none";
+            document.getElementById("pay_view").style.display = "none";
+            document.getElementById("ajax-output_notice").style.display = "none";
+            document.getElementById("ajax-output_totalmytalk_annmy").style.display = "none";
+           
+            document.getElementById("ng_Comment").style.display = "none";
+            document.getElementById("ng_Page_4to8").style.display = "none";
+
+      document.getElementById("pay_search").style.display = "block";
+      $('#p_title').html("卡片搜索");
+   
+    }
+
+    function open_talk() {
+      ham_hide();
+      $("#bottom_buttom")[0].style.opacity = '1';
+      //document.getElementById("bottom_buttom").style.display= 'block';
+
+      $(".ng_collection").css({
+        "display": "none"
+      });
+      document.getElementById("ajax-output_notice").style.display = "none";
+      document.getElementById("pay_home").style.display = "none";
+      document.getElementById("pay_view").style.display = "none";
+      document.getElementById("ng_Comment").style.display = "none";
+      document.getElementById("pay_search").style.display = "none";
+      document.getElementById("ajax-output_totalmytalk_annmy").style.display = "none";
+      document.getElementById("ng_Page_4to8").style.display = "block";
+      $('#load_talk').get(0).click();
+
+      $('#p_title').html("貼文");
+   
+    }
+
+    function open_notification() {
+      ham_hide();
+      $("#bottom_buttom")[0].style.opacity = '1';
+      //document.getElementById("bottom_buttom").style.display= 'block';
+      $(".ng_collection").css({
+        "display": "none"
+      });
+      document.getElementById("ng_Comment").style.display = "none";
+      document.getElementById("ajax-output_totalmytalk_annmy").style.display = "none";
+      document.getElementById("pay_home").style.display = "none";
+      document.getElementById("pay_view").style.display = "none";
+
+      document.getElementById("pay_search").style.display = "none";
+
+      document.getElementById("ng_Page_4to8").style.display = "none";
+      document.getElementById("ajax-output_notice").style.display = "block";
+      $('#ajax-form_notice input[name=NOTEUSER]').val(mail);
+      $('#view_b_notice').get(0).click();
+
+      $('#p_title').html("通知");
+   
+    }
+
+
+    //<!--=============凱揚=============================================================-->
+    /*$( ".ng_MainInterface_4to8_6" ).load( './step5_total' , function() {       //load
+    });*/
+
+    var talk_list_id = "";
+
+    function view_talk(x) {
+      //var return="talk"+x.toString();
+      talk_list_id = "talk" + x.toString();
+      document.getElementById("view_t").value = "talk" + x.toString();
+      document.getElementById("view_h").value = "0";
+      document.getElementById("view_c").value = "0";
+      document.getElementById("view_u").value = "0";
+      document.getElementById("view_up").value = "0";
+      //alert(document.getElementById("view_t").value);
+
+
+            var type=$(this).parent().attr('id');
+            var value;
+            if(type=='ajax-output_totalmytalk')
+                value='b';
+             else if(type=='ajax-output_totalmytalk_annmy')
+                value='c';
+            else
+                value='a';
+        $("#ng_Comment").attr('title', value);
+        console.log("type="+type);
+      $('#view_b_text').get(0).click();
+
+    }
+
+    function com_talk() {
+      //var return="talk"+x.toString();
+      //talk_list_id="talk"+x.toString();
+      document.getElementById("view_t").value = talk_list_id;
+      document.getElementById("view_h").value = "0";
+      document.getElementById("view_c").value = "0";
+      document.getElementById("view_u").value = "0";
+      document.getElementById("view_up").value = "0";
+      //alert(document.getElementById("view_t").value);
+
+
+      $('#view_b_text').get(0).click();
+
+    }
+
+
+
+
+    //<!--============鈺鈴============================================================-->
+
+    var pay_user;
+
+
+    //載入使用者擁有的卡片
+    $(document).ready(function () {
+
+      ///$('#load_talk').get(0).click();
+
+      //document.getElementById("u_load").value=pay_user;
+      //$('#b_load').get(0).click();
+      $(document).ajaxSuccess(function () {
+        drag();
+      });
+    });
+
+    var pay_in_cal; //國內回饋
+    var pay_out_cal; //國外回饋
+
+    var pay_io_cal; //選取計算用回饋模式
+    var pay_wayid; //使勇者點選回饋方式
+    document.getElementById("pw_choose").value = 0; //初始化回饋方式為"國內回饋"
+
+
+    //卡片滑動
+    function drag() { //alert(1);
+      $(".pay_card").draggable({
+        axis: "x",
+        revert: true,
+        start: function () {
+          var pay_id = window.event.srcElement.id; //擷取點選的card
+          pay_cardselect = pay_id; //$("#"+pay_id).text(); 
+
+          pay_in_cal = document.getElementById(pay_id).children[0].className; //由後端取國內回饋 值
+          pay_in_cal = pay_in_cal.substring(0, pay_in_cal.search("%"));
+          pay_out_cal = document.getElementById(pay_id).children[1].className; //由後端取國外回饋 值
+          pay_out_cal = pay_out_cal.substring(0, pay_out_cal.search("%"));
+
+          pay_img_src = "'" + document.getElementById(pay_id).children[2].className + "'"; //由後端取卡圖片 連結
+          document.getElementById("pay_cimg").style.backgroundImage = 'url(' + pay_img_src + ')';
+
+          pay_io_cal = pay_in_cal; //初始化 pay_io_cal(計算用回饋模式)
+        },
+        drag: function () {
+          ;
+        },
+        stop: function () {
+          document.getElementById("c_choose").value = pay_cardselect; //點選的card  放入form中 準備回傳	 
+          document.getElementById("u_choose").value = pay_user; //點選的user  放入form中 準備回傳
+          document.getElementById("s_choose").value = 0; //點選的spend  放入form中 準備回傳
+
+          //取時間
+          var pay_dt = new Date();
+          var pay_year = pay_dt.getFullYear();
+          var pay_momth = pay_dt.getMonth() + 1;
+          var pay_date = pay_dt.getDate();
+          document.getElementById("y_choose").value = pay_year;
+          document.getElementById("mon_choose").value = pay_momth;
+          document.getElementById("d_choose").value = pay_date;
+
+          document.getElementById("pay_home").style.display = "none"; //開關頁面
+          document.getElementById("pay_view").style.display = "block";
+
+          $('#b_choose').get(0).click(); //模擬按下按鈕
+        }
+      });
+    }
+
+    var pay_cardselect = ""; // 卡片名 全域變數
+
+    var pay_dotin = ""; //初始化記帳input 值
+    function keyboardshow() { //  由看花費頁 切 換到 試算頁
+      document.getElementById("pay_result").value = 0;
+      pay_dotin = "";
+
+      document.getElementById("pay_keyboard").style.display = "block";
+      document.getElementById("pay_in_out").style.display = "table";
+
+      document.getElementById("pay_spendlist").style.display = "none";
+      document.getElementById("pay_cal").style.display = "none";
+    }
+
+    var pay_roundDecimal = function (pay_val, pay_precision) { //取到小數點後n為函式
+      return Math.round(Math.round(pay_val * Math.pow(10, (pay_precision || 0) + 1)) / 10) / Math.pow(10, (
+        pay_precision || 0));
+    }
+
+    function keyin(pay_x) { //  記帳 試算
+      if (pay_x != '10') { //純輸入
+        var pay_s = document.getElementById("pay_result").value;
+
+        if (pay_x == '11') { //遇"<"做刪除
+          pay_dotin = pay_s.toString();
+          pay_dotin = pay_dotin.substr(0, pay_dotin.length - 1);
+          if (pay_dotin == "")
+            pay_s = 0;
+          else //否則 做逐字輸入
+            pay_s = parseFloat(pay_dotin);
+        } else { //做儲存
+          pay_dotin = (pay_dotin + pay_x);
+          pay_s = parseFloat(pay_dotin);
+        }
+
+        document.getElementById("pay_resultdown").value = pay_roundDecimal((pay_s * (1 + pay_io_cal / 100)), 3)
+          .toString() + ' ' + ' ' + '-' + ' ' + ' ' + pay_roundDecimal((pay_s * (pay_io_cal / 100)), 3)
+        .toString(); //前端回顯回饋
+        document.getElementById("pay_result").value = pay_s; //前端回顯輸入值
+
+        document.getElementById("s_choose").value = pay_s; //記錄待傳輸spend值
+      } else { //儲存回資料庫
+        document.getElementById("pay_spendlist").style.display = "block";
+        document.getElementById("pay_cal").style.display = "block";
+        document.getElementById("pay_keyboard").style.display = "none";
+        document.getElementById("pay_in_out").style.display = "none";
+
+        document.getElementById("pay_result").value = "";
+        $('#b_choose').get(0).click();
+      }
+    }
+
+    function payway() { //  回饋方式css切換
+
+      pay_wayid = window.event.srcElement.id;
+      var pay_class = event.srcElement.className;
+
+      if (pay_class != "payin") {
+        document.getElementById(pay_wayid).className = "payin";
+        document.getElementById("payout").style.borderRadius = "0 20px 0 0";
+      }
+
+      if (pay_wayid == "payin") {
+        pay_io_cal = pay_in_cal;
+        document.getElementById("payout").className = "payout";
+        document.getElementById("payout").style.borderRadius = "0 20px 0 0";
+
+        document.getElementById("pw_choose").value = 0;
+      } else {
+        pay_io_cal = pay_out_cal;
+        document.getElementById("payin").className = "payout";
+        document.getElementById("payin").style.borderRadius = "20px 0 0 0";
+        document.getElementById("pw_choose").value = 1;
+
+      }
+
+      paywaychange();
+    }
+
+    function paywaychange() { //切換回饋計算方式 及 回顯值
+      pay_s = document.getElementById("pay_result").value;
+      document.getElementById("pay_resultdown").value = pay_roundDecimal((pay_s * (1 + pay_io_cal / 100)), 3)
+      .toString() + ' ' + ' ' + '-' + ' ' + ' ' + pay_roundDecimal((pay_s * (pay_io_cal / 100)), 3).toString();
+    }
+
+    function keyboardback() { //返回鍵切換頁面
+      if (document.getElementById("pay_keyboard").style.display == "block") {
+
+        document.getElementById("pay_keyboard").style.display = "none";
+        document.getElementById("pay_in_out").style.display = "none";
+
+        document.getElementById("pay_spendlist").style.display = "block";
+        document.getElementById("pay_cal").style.display = "block";
+      } else {
+        document.getElementById("pay_home").style.display = "block"; //開關頁面
+        document.getElementById("pay_view").style.display = "none";
+      }
+
+    }
+
+    function pay_delete(x) { //  刪除單筆消費
+      var pay_id_s = x; //擷取點選的card
+
+      document.getElementById("s_choose").value = pay_id_s;
+
+      $('#b_choose').get(0).click();
+
+    }
+    //========== ham + bottom ===================================================================
+    function ham_hide() {
+      {
+        if ($("#p_sidebar").hasClass("p_off") == 0) {
+          $("#p_sidebar").addClass("p_off").animate({
+            left: "-60%",
+            opacity: "0.8"
+          });
+          $("#p_sidebar").removeClass("p_show");
+        }
+      }
+    }
+    $(".p_bottom_img").click(function () {
+      $("#home").removeClass("p_bottom_click");
+      $("#notification").removeClass("p_bottom_click");
+      $("#bottom_card").removeClass("p_bottom_click");
+      $(this).addClass("p_bottom_click");
+    });
+  </script>
+
+
+</body>
+
+</html>

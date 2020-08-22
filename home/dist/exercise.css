@@ -1,0 +1,698 @@
+html{
+width:100%;
+height:100%;
+}
+body{
+width:100%;
+height:100%;
+overflow-x:hidden;
+overflow-y:hidden;
+margin:0%;
+}
+/*=================================================================================*/
+/*最外層container*/
+header {
+    position: relative;
+    background-color: #E2E2E2;
+    margin: 0 auto;
+    width: 100%;
+    height: 6.5%;
+    z-index: 1;
+}
+
+.p_buttom {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 6.5%;
+    display: flex;
+    background-color: #E2E2E2;
+
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+#bottom_buttom {
+    display: none;
+}
+
+.p_bottom_click {
+    background-color: #515151;
+    border-radius: 1em;
+
+    text-align: center;
+
+}
+
+.p_header {
+    position: absolute;
+    background-color: #000000;
+    margin: 0 0;
+    top: 0%;
+    left: 50%;
+    width: 50%;
+    height: 6.5%;
+    z-index: 2;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+#p_header_span {
+    flex: 1;
+    text-align: center;
+    margin: 2% 0 2% 0;
+
+}
+
+.p_header_span_word_style {
+    font-family: Segoe UI;
+    font-size: 0.8em;
+    margin: 0 0 5% 0;
+}
+
+.p_header_span_number_style {
+    font-family: Segoe UI;
+    font-size: 1.8em;
+    margin: 0 0 5% 0;
+}
+
+#p_line {
+    width: 85%;
+    height: 1px;
+    border-top: solid #E2E2E2 1px;
+    margin: 0 7.5% 0 7.5%;
+}
+
+#p_head_card_post {
+    display: flex;
+}
+
+#ham2 {
+    width: 20%;
+    display: block;
+    margin: 0% 40% 10% 40%;
+}
+
+#ham {
+    position: absolute;
+    margin-left: 4%;
+    width: 10%;
+    left: 0%;
+    top: 0%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+/* 側邊欄 */
+.p_wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    align-items: stretch;
+
+}
+
+.p_off {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    background-color: #2B2D34;
+}
+
+#p_other_sidebar {
+    z-index: 20;
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    right: 0em;
+    top: 0em;
+
+}
+
+#p_sidebar {
+    z-index: 100;
+    position: relative;
+    text-align: center;
+    border-radius: 0 1.2em 1.2em 0;
+    margin: 0;
+}
+
+.p_show {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    background-color: #2B2D34;
+    color: #ffffff;
+}
+
+.p_sidebar-header {
+    position: relative;
+    font-size: 3vmin/1;
+    letter-spacing: 3vmin/1;
+    z-index: 3;
+}
+
+.p_components {
+    margin: 1% 0 0 0;
+    position: relative;
+    height: 10%;
+    font-size: 3vmin/1;
+    letter-spacing: 3vmin/1;
+    z-index: 3;
+    font-family: Segoe UI;
+}
+
+p {
+    font-family: Segoe UI;
+}
+
+#p_header_list_word {
+    list-style: none;
+    padding: 7% 0 7% 0;
+    margin: 0 0 0 10%;
+    cursor: pointer;
+    font-family: Segoe UI;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.p_header_list_word_line {
+    margin-bottom: 2%;
+    font-size: 0.8em;
+    font-family: Segoe UI;
+    margin: 0 20% 0 5%
+}
+
+#p_header_img {
+    position: relative;
+    width: 15%;
+}
+
+.p_head_arrow {
+    font-size: 1.5em;
+}
+
+/*======================================================*/
+
+
+/*========= home ================================================================================ */
+.pay_outerlayer,.pay_inlayer{    
+    position:absolute;
+    left:0%;//4%;
+	top:6.5%;//17.6912%;
+    height:87%;//75.7121%;
+    width: 100%;//92%;
+//background-image: url(./res/img/back.png);
+background-repeat: no-repeat;
+background-size: cover;
+  //  border-style:solid;
+overflow-x:hidden;
+overflow-y:hidden;  
+display:none;
+}
+.pay_cardlist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    position:relative;
+    //top:50%;
+    height:100%;
+    width: 100%;
+    border-style:solid;
+    border-color:transparent;//#FFAC55;
+
+overflow-x:hidden;
+overflow-y:auto;    
+
+}
+.pay_cardlist li {
+    margin-top: 5%;
+    padding: 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.pay_card {
+    //background-color: lightblue;
+    //border: 1px solid gray;
+
+background-repeat: no-repeat;
+background-size: 100% 80%,100% 100%;
+
+    position:relative;
+    left:20%;
+    height:30%;
+    width: 60%;
+}
+.pay_io{
+text-align:center;
+    //background-color: gieen;
+    //border: 1px solid gray;
+
+    position:relative;
+    top:80%;
+color:white;
+	width:100%;  
+	height:20%;
+	font-size:1em;
+}
+
+#a{       
+    animation-name:july_a;
+    animation-duration:0.5s;
+        animation-delay:0.6s;
+    animation-iteration-count:2;
+}
+@keyframes july_a{
+    0%{
+        left:20%;width: 60%;
+    }
+    50%{
+        left:17%;width: 61%;
+    }
+    51%{
+        left:19%;width: 60%;
+    }
+    100%{
+        left:20%;width: 60%;
+    }
+}
+
+#b{       
+    animation-name:july_b;
+    animation-duration:0.5s;
+        animation-delay:1.3s;
+    animation-iteration-count:2;
+}
+@keyframes july_b{
+    0%{
+        left:20%;width: 60%;
+    }
+    50%{
+        left:17%;width: 61%;
+    }
+    51%{
+        left:19%;width: 60%;
+    }
+    100%{
+        left:20%;width: 60%;
+    }
+}
+
+/*========= view ================================================================================ */
+#pay_view{    
+    position:absolute;
+    /*left:0%;top:8.5457%;
+    height:84.8576%;
+    width: 100%;*/
+
+    left:0%;//4%;
+	top:6.5%;//17.6912%;
+    height:87%;//75.7121%;
+    width: 100%;//92%;
+
+
+    border-style:solid;
+overflow-x:hidden;
+overflow-y:hidden;  
+display:none;
+}
+
+.pay_cimg{
+    //background-color: lightblue;
+    border: 0px solid gray;
+ 
+background-repeat: no-repeat;
+background-size: 100% 100%;
+
+    position:relative;
+    left:29.333%;top:4.6572%;
+    height:17.3145%;
+    width: 41.6%;
+}
+table{
+     position:relative;     
+     height:8.6572%;
+     width:100%;
+      left:0%;top:5.3004%;
+     border-radius: 20px;
+     rules:"none";
+     text-align:center;
+     //border:0.01px solid #FFEE00;//
+border:0;
+//border-collapse: collapse;
+}
+td{
+	width:50%;  
+	height:80%;
+	font-size:1.8em;
+}
+#pay_in_out{
+   // border-color:#FFEE00;
+     border-radius: 20px 20px 0 0;
+display:none;
+}
+.payin{
+    border-color:#FFEE00;
+     border-radius: 20px 0 0 0;
+    background-color: #FFEE00;
+}
+.payout{
+     border-radius: 0 20px  0 0;
+    background-color: black;
+ color:white;
+    border-color:#FFEE00;border: 1px solid #FFEE00;
+}
+
+#inr,#outr{
+display:none;
+}
+.pay_spendlist {
+    list-style-type: none;
+    margin:0;//-bottom: 2%;
+    padding: 0;
+    
+    position:relative;
+    
+    left:4%;top:6.11731%;
+    height:72.9682%;
+    width: 92%;
+    border-style:solid;
+    border-color:transparent;//#FFAC55;
+overflow-x:hidden;
+overflow-y:auto;        
+    border-radius: 20px;
+
+  background-color: white;
+
+       z-index:1;
+}
+.pay_spendlist li {
+    cursor: pointer;      
+    border-radius: 20px;
+}
+#pay_feedback{
+    //background-color: lightblue;
+    border: 1px solid gray;
+    position:relative;
+    left:5%;
+    height:10%;
+    width: 90%;      
+    border-radius: 20px;
+}
+.pay_return,.hide{
+           display:none;
+}
+.pay_spend {
+    background-color: lightblue;
+
+    background-color: black;
+
+    border: 1px solid gray;
+    position:relative;
+    left:3.2967%;top:2.3188%;
+margin-top:1%;
+    height:16.7582%;
+    width: 95.6522%;    
+color:white;
+        font:         normal 2vmin/1 "Ubuntu", cursive; 
+}
+
+
+.pay_cal{
+    background-image:url(./res/img/cal.png);
+        background-size: 100%;	
+	background-position:top left;
+        background-repeat: no-repeat;
+    border: 1px solid gray;
+    position:fixed;
+    bottom:10%;
+       right:6.1333%;
+    height:9vh;//9.364%;
+    width:9vh;      //14.1333%;
+    border-radius: 50%;
+       z-index:3;
+border-style:none;
+}
+.pay_addcard{
+background-color:black;
+    background-image:url(./res/img/add.JPG);
+        background-size: 60%;	
+	background-position:center center;//top left;
+        background-repeat: no-repeat;
+    border: 1px solid #FFEE00;
+    position:fixed;
+    bottom:10%;
+       right:6.1333%;
+    height:9vh;//9.364%;
+    width:9vh;      //14.1333%;
+    border-radius: 50%;
+       z-index:3;
+//border-style:none;
+}
+.pay_cal_img{
+    position:relative;
+top:0%;left:0%;
+
+           height:100%;
+           width: 100%;   
+}
+.pay_calback{
+background-image:url(./res/img/key/bback.png);
+        background-size: 100%;	
+	background-position:top left;
+        background-repeat: no-repeat;
+    border: 1px solid gray;
+    position:fixed;
+    top:10%;
+      left:6.1333%;
+    height:9vh;//9.364%;
+    width:9vh;      //14.1333%;
+    border-radius: 50%;
+       z-index:3;
+border-style:none;
+}
+.pay_cal_img{
+    position:relative;
+top:0%;left:0%;
+
+           height:100%;
+           width: 100%;   
+
+}
+/*========= cal ================================================================================ */
+.pay_result,.pay_resultmid,.pay_resultdown{
+    background-color:transparent;
+    border: 0px solid gray;
+
+background-color:
+}
+
+
+.pay_result{
+list-style-type: none;
+    margin: 0;
+    padding: 0;    
+    padding-left: 1%;
+
+    position:relative;
+    top:0%; left:0%;
+
+     text-align:center;
+
+    height:40%;
+    width:95%;
+}
+.pay_resultmid{
+list-style-type: none;
+    margin: 0;
+    padding: 0;    
+    padding-left: 1%;
+
+    position:relative;
+    top:0%; left:0%;
+     text-align:center;
+
+    background-color: white;
+color:white;
+    height:15%;
+    width:95%;
+}
+
+.pay_resultdown{
+list-style-type: none;
+    margin: 0;
+    padding: 0;    
+    padding-left: 1%;
+
+
+     text-align:center;
+
+    position:relative;
+    top:0%; left:0%;
+
+    height:30%;
+    width:95%;
+}
+
+#pay_checkin {
+    background-color:transparent;
+background-image:url(./res/img/checkload.png);
+
+        background-size: 40% 40%;	
+	background-position:center center;
+        background-repeat: no-repeat;
+
+    border: 0px solid gray;
+    position:relative;
+    left:0%;
+	top:10%;
+    height:60%;
+    width: 100%;   
+//font:          italic normal 2vmin/1 "Ubuntu", sans-serif;
+    //border-radius: 20px;
+}
+#pay_ans{
+
+list-style-type: none;
+    margin: 0;
+    padding: 0;    
+
+    background-color: white;
+
+    border: 0px solid gray;
+
+list-style-type: none;
+    margin: 0;
+    padding: 0;    
+
+    position:relative;
+    left:0%;top:-5%;
+    height:20%;
+    width: 100%;   
+
+
+}
+.pay_res{
+
+list-style-type: none;
+    margin: 0;
+    padding: 0;    
+
+    //background-color: white;
+
+    border: 0px solid gray;
+
+list-style-type: none;
+    margin: 0;
+    padding: 0;    
+
+    position:relative;
+    left:0%;top:-5%;
+    height:20%;
+    width: 100%;   
+
+
+}
+
+.pay_left{
+
+list-style-type: none;
+    margin: 0;
+    padding: 0;    
+
+    border: 0px solid gray;
+width: 90%;
+}
+.pay_right{
+
+
+list-style-type: none;
+    margin: 0;
+    padding: 0;    
+
+    border: 0px solid gray;
+border-color: transparent;
+    
+width: 10%;
+}
+
+.pay_keyboard {
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    position:relative;
+    
+    left:4%;top:6.11731%;
+    height:64.311%;
+    width: 92%;
+    border-style:solid;
+    border-color:#FFAC55;
+
+    border-radius: 20px;
+    border-style:solid;
+    border-color:transparent;//red;
+
+overflow-x:hidden;
+overflow-y:hidden;    
+display:none;
+
+       z-index:5;
+}
+.pay_in {
+    background-color: transparent;//lightblue;
+    border: 0px solid gray;
+    position:relative;
+    left:0%;
+    width: 50%;    
+    height:60%;
+       vertical-align: middle;
+       top:0%;
+       font:italic normal 3vmin/1 "Ubuntu", sans-serif;
+color:transparent;
+        background-size: cover;	
+	background-position:center center;//top left;
+        background-repeat: no-repeat;
+
+    height:7vh;//9.364%;
+    width:7vh;      //14.1333%;
+    border-radius: 50%;
+
+
+}
+#pay_check {
+    background-color: lightblue;
+    border: 1px solid gray;
+    position:relative;
+    left:0%;
+    height:60%;
+    width: 75%;   
+font:          italic normal 3vmin/1 "Ubuntu", sans-serif;
+    //border-radius: 20px;
+}
+
+
+#pay_board{
+      table-layout:fixed;
+     position:relative;   
+
+    top:-5%;//23.077%;
+         left:11.884%;
+         bottom:0%;
+     width: 76.522%;//40%;
+          height: 51.154%;//30vh;
+     border-radius: 20px;
+     //rules:"none";
+     text-align:center;
+vertical-align: middle;
+     border:0px solid #000;
+line-height:7.5vh;
+}
