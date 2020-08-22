@@ -7,6 +7,7 @@
 git clone https://github.com/Chang-Yu-Ling/UIDD_project.git
 ```
 * 如下圖
+
 ![](https://i.imgur.com/XC2PDQg.png)
 
 
@@ -16,6 +17,7 @@ cd ~/home的檔案路徑
 node ser.js
 ```
 * 如下圖
+
 ![](https://i.imgur.com/NcBJbfA.png)
 
 
@@ -30,6 +32,7 @@ node ser.js
 > * 登入流程
 > 
 > 網址：http://luffy.ee.ncku.edu.tw:9999/home.html
+> 
 > 輸入網址    |  點選登入　 | 選擇登入方式 | 輸入帳號/密碼|點選登入
 > --------------|------------------------|------------------------|------------------------|------------------------|------------------------
 > ![](https://i.imgur.com/CpQyEkM.png)|![](https://i.imgur.com/JQEguvo.png)|![](https://i.imgur.com/13eP5Vx.png)|![](https://i.imgur.com/iwKbi2a.png)|![](https://i.imgur.com/ZD4bL7v.png)
