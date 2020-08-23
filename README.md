@@ -18,7 +18,7 @@ node ser.js
 ```
 * 如下圖
 
-![](https://i.imgur.com/NcBJbfA.png)
+![](https://i.imgur.com/YV80tsp.png)
 
 
 #### 3. 登入
